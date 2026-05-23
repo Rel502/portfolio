@@ -1,0 +1,23 @@
+@font-face {
+    font-family: 'Anta';
+    src: url('../assets/fonts/Anta-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Josefin Sans';
+    src: url('../assets/fonts/JosefinSans-VariableFont_wght.ttf') format('truetype');
+    font-weight: 100 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Josefin Sans';
+    src: url('../assets/fonts/JosefinSans-Italic-VariableFont_wght.ttf') format('truetype');
+    font-weight: 100 700;
+    font-style: italic;
+    font-display: swap;
+}

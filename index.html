@@ -1,14 +1,53 @@
 <!DOCTYPE html>
 <html lang="de">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio</title>
+    <link rel="stylesheet" href="./css/fonts.css">
+    <link rel="stylesheet" href="./css/variables.css">
     <link rel="stylesheet" href="./css/utilities.css">
+    <link rel="stylesheet" href="./css/components.css">
     <link rel="stylesheet" href="./css/style.css">
     <script src="./js/main.js" defer></script>
 </head>
+
 <body>
-    
+    <header class="header">
+        <nav class="navbar">
+            <a href="#hero" class="logo" aria-label="Zur Startseite">
+                <img src="./assets/icons/logo-dark-mob.svg" alt="" class="logo-icon">
+
+                <span class="logo-text">
+                    <span class="logo-name">M. Zeitler</span>
+                    <span class="logo-role">developer</span>
+                </span>
+            </a>
+
+            <ul class="nav-list">
+                <li><a href="#about">Why me</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+
+            <div class="language-switch">
+                <button type="button" class="language-btn">DE</button>
+                <button type="button" class="language-btn active">EN</button>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section id="hero" class="hero"></section>
+        <section id="about" class="about"></section>
+        <section id="skills" class="skills"></section>
+        <section id="projects" class="projects"></section>
+        <section id="contact" class="contact"></section>
+    </main>
+
+    <footer></footer>
 </body>
+
 </html>

@@ -1,5 +1,115 @@
+/* ============================= */
+/* Basis Styles                  */
+/* ============================= */
+
 body {
     margin: 0;
     box-sizing: border-box;
+    background-color: var(--color-background);
+    font-family: var(--font-body);
+    font-weight: var(--fw-regular);
 }
 
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-headline);
+}
+
+
+/* ============================= */
+/* Header                        */
+/* ============================= */
+
+.header {
+    width: 100%;
+    background-color: var(--color-primary);
+}
+
+.navbar {
+    max-width: 1040px;
+    height: 90px;
+    margin: 0 auto;
+    padding: 0 24px;
+
+    display: grid;
+    grid-template-columns: 160px 1fr 160px;
+    align-items: center;
+}
+
+.logo {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    color: var(--color-background);
+}
+
+.logo-icon {
+    width: 48px;
+    height: auto;
+    display: block;
+}
+
+.logo-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    line-height: 1;
+}
+
+.logo-name {
+    margin-top: 1px;
+    font-family: 'Anta', sans-serif;
+    font-weight: var(--fw-regular);
+
+    font-size: 16px;
+    line-height: 120%;
+    letter-spacing: 0%;
+}
+
+.logo-role {
+    margin-top: 1px;
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: var(--fw-light);
+
+    font-size: 16px;
+    line-height: 120%;
+    letter-spacing: 0%;
+}
+
+.nav-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 72px;
+
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.nav-list a {
+    color: var(--color-background);
+    font-size: 18px;
+    /* font-weight: 600; */
+    text-decoration: none;
+}
+
+.language-switch {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 8px;
+}
+
+.language-btn {
+    border: none;
+    background: transparent;
+    color: var(--color-background);
+    font-size: 14px;
+    /* font-weight: 600; */
+    cursor: pointer;
+}
+
+.language-btn.active {
+    color: var(--color-secondary);
+}
