@@ -1,0 +1,118 @@
+/* ============================= */
+/* Logo                          */
+/* ============================= */
+
+.logo {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    color: var(--color-background);
+}
+
+.logo-icon {
+    width: 48px;
+    height: auto;
+    display: block;
+}
+
+.logo-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    line-height: 1;
+}
+
+.logo-name {
+    margin-top: 1px;
+    font-family: 'Anta', sans-serif;
+    font-weight: var(--fw-regular);
+
+    font-size: 16px;
+    line-height: 120%;
+    letter-spacing: 0%;
+}
+
+.logo-role {
+    margin-top: 1px;
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: var(--fw-light);
+
+    font-size: 16px;
+    line-height: 120%;
+    letter-spacing: 0%;
+}
+
+.logo--hero .logo-name {
+    color: var(--color-secondary);
+}
+
+.logo--hero .logo-role {
+    color: var(--color-primary);
+}
+
+
+/* ============================= */
+/* Social-Links                  */
+/* ============================= */
+
+.social-link {
+    width: 32px;
+    height: 32px;
+
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+
+    text-decoration: none;
+
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+
+.social-link--email {
+    background-image: url("../assets/icons/email-default.svg");
+}
+
+.social-link--github {
+    background-image: url("../assets/icons/github-default.svg");
+}
+
+.social-link--linkedin {
+    background-image: url("../assets/icons/linkedin-default.svg");
+}
+
+.social-link--email:hover {
+    background-image: url("../assets/icons/email-hoverblue.svg");
+}
+
+.social-link--github:hover {
+    background-image: url("../assets/icons/github-hoverblue.svg");
+}
+
+.social-link--linkedin:hover {
+    background-image: url("../assets/icons/linkedin-hoverblue.svg");
+}
+
+
+/* ============================= */
+/* Scroll-Down Button            */
+/* ============================= */
+
+.scroll-down {
+    grid-row: 3;
+
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    align-self: center;
+
+    text-decoration: none;
+}
+
+.scroll-down img {
+    width: 40px;
+    height: auto;
+    display: block;
+}
