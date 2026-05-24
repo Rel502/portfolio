@@ -2,26 +2,27 @@ document.addEventListener('DOMContentLoaded', init);
 
 function init() {
     console.log('initializing');
-    updateActiveNavLinks();
+    setupActiveElements('.nav-list a');
+    setupActiveElements('.language-btn');
 }
 
-function updateActiveNavLinks() {
-    let navLinks = document.querySelectorAll('.nav-list a');
+function setupActiveElements(selector) {
+    let elements = document.querySelectorAll(selector);
 
-    navLinks.forEach((link) => {
-        link.addEventListener('click', () => {
-            resetActive(navLinks);
-            setActive(link);
+    elements.forEach((element) => {
+        element.addEventListener('click', () => {
+            resetActive(elements);
+            setActive(element);
         });
     });
 }
 
-function resetActive(links) {
-    links.forEach((link) => {
-        link.classList.remove('active');
+function resetActive(elements) {
+    elements.forEach((element) => {
+        element.classList.remove('active');
     });
 }
 
-function setActive(link) {
-    link.classList.add('active');
+function setActive(element) {
+    element.classList.add('active');
 }
