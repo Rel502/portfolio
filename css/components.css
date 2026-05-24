@@ -117,8 +117,17 @@
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
+
+    transition: transform 200ms ease-in-out;
 }
 
-.scroll-down:hover {
+.scroll-down:hover,
+.scroll-down:focus-visible {
     background-image: url("../assets/icons/arrow-down-hover.svg");
+    transform: translateY(6px);
+}
+
+.scroll-down:focus-visible {
+    outline: 2px solid var(--color-primary);
+    outline-offset: 8px;
 }

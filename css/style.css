@@ -54,6 +54,7 @@ h6 {
     z-index: 0;
 
     width: min(360px, 80%);
+    width: 500px;
     display: flex;
     align-self: end;
 }
@@ -123,7 +124,7 @@ h6 {
     position: relative;
 
     display: grid;
-    grid-template-rows: 160px 1fr 120px;
+    grid-template-rows: 45% 1fr 25%;
     justify-items: center;
     align-items: center;
 }
@@ -140,13 +141,14 @@ h6 {
 
 .hero-logo {
     grid-row: 1;
+    align-self: end;
 }
 
 .hero-intro {
     grid-row: 2;
     text-align: center;
     align-self: start;
-    margin-top: 80px;
+    margin-top: 24px;
 }
 
 .hero-intro h1 {
