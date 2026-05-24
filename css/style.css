@@ -21,10 +21,121 @@ h6 {
 
 
 /* ============================= */
+/* Landing / Hero                */
+/* ============================= */
+
+.landing {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* .hero {
+    flex: 0.9;
+    width: 100%;
+    max-width: 1040px;
+    margin: 0 auto;
+    padding: 0 24px;
+    box-sizing: border-box;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+} */
+
+.hero {
+    position: relative;
+    z-index: 1;
+
+    flex: 0.9;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.hero-left {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-image-wrapper {
+    position: relative;
+    z-index: 0;
+
+    width: min(360px, 80%);
+    display: flex;
+    align-self: end;
+}
+
+.hero-image-wrapper::before {
+    content: "";
+    position: absolute;
+    z-index: 0;
+    pointer-events: none;
+
+    width: 130%;
+    height: 130%;
+
+    background-image: url("../assets/icons/ellipse-hero-default.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    opacity: 1;
+    transition: opacity 350ms ease-in-out;
+}
+
+.hero-image-wrapper::after {
+    content: "";
+    position: absolute;
+    z-index: 0;
+    pointer-events: none;
+
+    width: 130%;
+    height: 130%;
+
+    background-image: url("../assets/icons/ellipse-hero-hover.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    opacity: 0;
+    transition: opacity 350ms ease-in-out;
+}
+
+.hero-left:hover .hero-image-wrapper::before {
+    opacity: 0;
+}
+
+.hero-left:hover .hero-image-wrapper::after {
+    opacity: 1;
+}
+
+.hero-image {
+    position: relative;
+    z-index: 1;
+
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+
+/* ============================= */
 /* Header                        */
 /* ============================= */
 
 .header {
+    position: relative;
+    z-index: 10;
+
     width: 100%;
     background-color: var(--color-primary);
 }
