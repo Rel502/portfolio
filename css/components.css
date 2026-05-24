@@ -103,16 +103,22 @@
 .scroll-down {
     grid-row: 3;
 
+    width: 40px;
+    height: 94px;
+
     display: inline-flex;
     justify-content: center;
     align-items: center;
     align-self: center;
 
     text-decoration: none;
+
+    background-image: url("../assets/icons/arrow-down-default.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
 }
 
-.scroll-down img {
-    width: 40px;
-    height: auto;
-    display: block;
+.scroll-down:hover {
+    background-image: url("../assets/icons/arrow-down-hover.svg");
 }
