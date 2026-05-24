@@ -10,7 +10,12 @@ body {
     font-weight: var(--fw-regular);
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     font-family: var(--font-headline);
 }
 
@@ -31,7 +36,7 @@ h1, h2, h3, h4, h5, h6 {
     padding: 0 24px;
 
     display: grid;
-    grid-template-columns: 160px 1fr 160px;
+    grid-template-columns: 72px 1fr 72px;
     align-items: center;
 }
 
@@ -89,9 +94,17 @@ h1, h2, h3, h4, h5, h6 {
 
 .nav-list a {
     color: var(--color-background);
-    font-size: 18px;
-    /* font-weight: 600; */
     text-decoration: none;
+    font-size: 26px;
+    line-height: 120%;
+    letter-spacing: 0%;
+    font-family: var(--font-body);
+    font-weight: var(--fw-medium);
+}
+
+.nav-list a:hover,
+.nav-list a.active {
+    color: var(--color-secondary);
 }
 
 .language-switch {
