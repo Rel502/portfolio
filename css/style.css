@@ -96,6 +96,7 @@ h6 {
     position: relative;
     z-index: 0;
     display: inline-block;
+
     color: var(--color-background);
     text-decoration: none;
     font-size: 26px;
@@ -137,6 +138,10 @@ h6 {
 }
 
 .language-btn {
+    position: relative;
+    z-index: 0;
+    display: inline-block;
+
     border: none;
     background: transparent;
     color: var(--color-background);
@@ -148,4 +153,23 @@ h6 {
 
 .language-btn.active {
     color: var(--color-secondary);
+}
+
+.language-btn.active::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    pointer-events: none;
+
+    width: 36px;
+    height: 24px;
+
+    background-image: url("../assets/icons/ellipse-24.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
