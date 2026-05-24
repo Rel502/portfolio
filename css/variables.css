@@ -18,4 +18,6 @@
     --fw-medium: 500;
     --fw-semibold: 600;
     --fw-bold: 700;
+
+    --content-max-width: 1920px;
 }

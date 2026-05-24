@@ -37,6 +37,12 @@
     margin: 1.5rem;
 }
 
+.u-content-limit {
+    width: 100%;
+    max-width: var(--content-max-width);
+    margin-inline: auto;
+}
+
 
 /* ============================= */
 /* Padding Utilities             */
