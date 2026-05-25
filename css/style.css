@@ -332,6 +332,8 @@ section {
 .about-location-icon {
     width: 64px;
     height: 64px;
+    opacity: 1;
+    transition: opacity 300ms ease-in-out;
 }
 
 .about-location p,
@@ -372,4 +374,15 @@ section {
 
 .about-button:hover {
     background-color: rgba(248, 245, 236, 0.12);
+}
+
+.about-location-text {
+    min-width: 360px;
+    opacity: 1;
+    transition: opacity 300ms ease-in-out;
+}
+
+.about-location-icon.is-hidden,
+.about-location-text.is-hidden {
+    opacity: 0;
 }
