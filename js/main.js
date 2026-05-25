@@ -4,6 +4,7 @@ function init() {
     console.log('initializing');
     setupActiveElements('.nav-list a');
     setupActiveElements('.language-btn');
+    setupScrollDownButton();
 }
 
 function setupActiveElements(selector) {
@@ -14,6 +15,21 @@ function setupActiveElements(selector) {
             resetActive(elements);
             setActive(element);
         });
+    });
+}
+
+function setupScrollDownButton() {
+    let scrollDownButton = document.querySelector('.scroll-down');
+    let aboutNavLink = document.querySelector('.nav-list a[href="#about"]');
+    let navLinks = document.querySelectorAll('.nav-list a');
+
+    if (!scrollDownButton || !aboutNavLink) {
+        return;
+    }
+
+    scrollDownButton.addEventListener('click', () => {
+        resetActive(navLinks);
+        setActive(aboutNavLink);
     });
 }
 

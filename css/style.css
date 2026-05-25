@@ -371,6 +371,5 @@ section {
 }
 
 .about-button:hover {
-    color: var(--color-background);
-    background-color: var(--color-primary);
+    background-color: rgba(248, 245, 236, 0.12);
 }
