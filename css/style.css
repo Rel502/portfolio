@@ -23,13 +23,17 @@ h6 {
     font-family: var(--font-headline);
 }
 
+section {
+    scroll-margin-top: var(--navbar-height);
+}
+
 
 /* ============================= */
 /* Landing / Hero                */
 /* ============================= */
 
 .landing {
-    min-height: 100vh;
+    min-height: calc(95vh - var(--navbar-height));
     display: flex;
     flex-direction: column;
 }
@@ -38,7 +42,7 @@ h6 {
     position: relative;
     z-index: 1;
 
-    flex: 0.9;
+    flex: 1;
     display: grid;
     grid-template-columns: 1fr 1fr;
 }
@@ -178,8 +182,9 @@ h6 {
 /* ============================= */
 
 .header {
-    position: relative;
-    z-index: 10;
+    position: sticky;
+    top: 0;
+    z-index: 100;
 
     width: 100%;
     background-color: var(--color-primary);
@@ -187,7 +192,7 @@ h6 {
 
 .navbar {
     max-width: 1040px;
-    height: 90px;
+    height: var(--navbar-height);
     margin: 0 auto;
     padding: 0 24px;
 
