@@ -489,7 +489,7 @@ section {
     background-position: center;
     background-size: contain;
 
-    transition: opacity 300ms ease-in-out;
+    transition: opacity 500ms ease-in-out;
 }
 
 .skills-learning::before {
@@ -513,10 +513,6 @@ section {
 .skills-learning>* {
     position: relative;
     z-index: 1;
-}
-
-.skills-learning:hover {
-    background-image: url("../assets/icons/ellipse-25-hover.svg");
 }
 
 .skills-learning h3 {
