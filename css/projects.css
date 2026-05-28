@@ -1,0 +1,226 @@
+/* ============================= */
+/* Projects                      */
+/* ============================= */
+
+.projects-tabs {
+    display: flex;
+    align-items: flex-end;
+    gap: 48px;
+
+    margin-bottom: 0;
+    padding-left: 0;
+}
+
+.project-tab {
+    border: none;
+    background: transparent;
+    color: var(--color-primary);
+
+    font-family: var(--font-body);
+    font-weight: var(--fw-medium);
+    font-size: 30px;
+    line-height: 120%;
+
+    cursor: pointer;
+}
+
+.project-tab.active {
+    padding: 24px 32px;
+    border-radius: 24px 24px 0 0;
+
+    background-color: rgba(137, 188, 217, 0.08);
+    color: var(--color-secondary);
+}
+
+.project-tab:hover {
+    color: var(--color-secondary);
+}
+
+.projects-content {
+    background-color: rgba(137, 188, 217, 0.08);
+    border-radius: 0 24px 24px 24px;
+}
+
+.project-panel {
+    display: none;
+    grid-template-columns: 1fr 1fr;
+    align-items: start;
+    gap: 64px;
+
+    min-height: 560px;
+    padding: 48px 80px;
+}
+
+.project-panel.active {
+    display: grid;
+}
+
+.project-info {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.project-text-block h3 {
+    margin: 0 0 8px;
+
+    color: var(--color-primary);
+    font-family: var(--font-headline);
+    font-weight: var(--fw-regular);
+    font-size: 28px;
+    line-height: 120%;
+}
+
+.project-text-block p {
+    margin: 0;
+
+    color: var(--color-secondary);
+    font-family: var(--font-body);
+    font-weight: var(--fw-regular);
+    font-size: 18px;
+    line-height: 130%;
+}
+
+.project-headline-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 24px;
+}
+
+.project-headline-row span {
+    color: var(--color-secondary);
+    font-family: var(--font-body);
+    font-weight: var(--fw-regular);
+    font-size: 14px;
+    line-height: 120%;
+    white-space: nowrap;
+}
+
+.project-preview {
+    max-width: 520px;
+    justify-self: center;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+}
+
+.project-technologies {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+}
+
+.project-technologies span {
+    color: var(--color-primary);
+    font-family: var(--font-headline);
+    font-weight: var(--fw-regular);
+    font-size: 18px;
+    line-height: 120%;
+}
+
+.project-tech-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 18px;
+}
+
+.project-tech-icon {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+}
+
+.project-image-placeholder {
+    width: 100%;
+    min-height: 260px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border: 1px solid var(--color-primary);
+    border-radius: 24px;
+
+    color: var(--color-secondary);
+    font-family: var(--font-body);
+    font-size: 18px;
+}
+
+.project-actions {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+}
+
+.project-btn {
+    min-width: 112px;
+    padding: 10px 24px;
+
+    font-size: 16px;
+    line-height: 120%;
+}
+
+.project-btn--primary {
+    background-color: var(--color-primary);
+    color: var(--color-background);
+}
+
+.project-btn--primary:hover {
+    background-color: var(--color-secondary);
+}
+
+.project-btn--outline {
+    border: 1px solid var(--color-primary);
+    color: var(--color-primary);
+}
+
+.project-btn--outline:hover {
+    background-color: rgba(248, 245, 236, 0.12);
+}
+
+.project-image-wrapper {
+    width: 100%;
+    aspect-ratio: 16 / 10;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    overflow: hidden;
+    border-radius: 24px;
+}
+
+.project-image {
+    width: 100%;
+    height: 100%;
+    display: block;
+
+    object-fit: cover;
+}
+
+.project-text-block {
+    position: relative;
+    padding-left: 48px;
+}
+
+.project-text-block::before {
+    content: "";
+    position: absolute;
+
+    width: 24px;
+    height: 24px;
+
+    background-image: url("../assets/icons/ellipse-8.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+
+    top: 2px;
+    left: 0;
+}

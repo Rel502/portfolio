@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="./css/hero.css">
     <link rel="stylesheet" href="./css/about.css">
     <link rel="stylesheet" href="./css/skills.css">
+    <link rel="stylesheet" href="./css/projects.css">
     <script src="./js/main.js" defer></script>
 </head>
 
@@ -159,7 +160,188 @@
                 </div>
             </div>
         </section>
-        <section id="projects" class="projects"></section>
+        <section id="projects" class="section projects u-content-limit" aria-labelledby="projectsHeading">
+            <h2 id="projectsHeading" class="section-title">My Projects</h2>
+
+            <nav class="projects-tabs" aria-label="Projektauswahl">
+                <button type="button" class="project-tab active" data-project="pokedex">1. Pokedex</button>
+                <button type="button" class="project-tab" data-project="join">2. Join</button>
+                <button type="button" class="project-tab" data-project="el-pollo-loco">3. El Pollo Loco</button>
+            </nav>
+
+            <div class="projects-content">
+                <article class="project-panel active" data-project="pokedex">
+                    <div class="project-info">
+                        <div class="project-text-block">
+                            <div class="project-headline-row">
+                                <h3>About the project</h3>
+                                <span>Duration: 3 weeks</span>
+                            </div>
+
+                            <p>
+                                A simple web application that uses the PokéAPI to display Pokémon data.
+                                Users can search for Pokémon and view relevant details in a clean interface.
+                            </p>
+                        </div>
+
+                        <div class="project-text-block">
+                            <h3>How I have organised my work process</h3>
+
+                            <p>
+                                The project was structured with reusable functions, separated logic and
+                                clear file organisation for HTML, CSS and JavaScript.
+                            </p>
+                        </div>
+
+                        <div class="project-text-block">
+                            <h3>My group work experience</h3>
+
+                            <p>
+                                This project helped me practise planning, documenting and improving code
+                                step by step.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="project-preview">
+                        <div class="project-technologies">
+                            <span>Technologies</span>
+
+                            <div class="project-tech-icons">
+                                <img src="./assets/icons/skills-HTML.svg" alt="HTML" class="project-tech-icon">
+                                <img src="./assets/icons/skills-CSS.svg" alt="CSS" class="project-tech-icon">
+                                <img src="./assets/icons/skills-JavaScript.svg" alt="JavaScript"
+                                    class="project-tech-icon">
+                                <img src="./assets/icons/skills-Rest-Api.svg" alt="REST API" class="project-tech-icon">
+                            </div>
+                        </div>
+
+                        <div class="project-image-wrapper">
+                            <img src="./assets/img/projects/pokedex.png" alt="Screenshot des Pokedex Projekts"
+                                class="project-image">
+                        </div>
+
+                        <div class="project-actions">
+                            <a href="#" class="btn project-btn project-btn--primary">Live Test</a>
+                            <a href="#" class="btn project-btn project-btn--outline">GitHub</a>
+                        </div>
+                    </div>
+                </article>
+                <article class="project-panel" data-project="join">
+                    <div class="project-info">
+                        <div class="project-text-block">
+                            <div class="project-headline-row">
+                                <h3>About the project</h3>
+                                <span>Duration: 5 weeks</span>
+                            </div>
+
+                            <p>
+                                Join is a task management application inspired by the Kanban system.
+                                Users can create tasks, assign contacts and organize work across different boards.
+                            </p>
+                        </div>
+
+                        <div class="project-text-block">
+                            <h3>How I have organised my work process</h3>
+
+                            <p>
+                                The project was structured into reusable components, clear JavaScript functions
+                                and separate areas for board logic, contacts and task handling.
+                            </p>
+                        </div>
+
+                        <div class="project-text-block">
+                            <h3>My group work experience</h3>
+
+                            <p>
+                                Working on Join helped me practise collaboration, task distribution,
+                                communication and merging different parts of the project.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="project-preview">
+                        <div class="project-technologies">
+                            <span>Technologies</span>
+
+                            <div class="project-tech-icons">
+                                <img src="./assets/icons/skills-HTML.svg" alt="HTML" class="project-tech-icon">
+                                <img src="./assets/icons/skills-CSS.svg" alt="CSS" class="project-tech-icon">
+                                <img src="./assets/icons/skills-JavaScript.svg" alt="JavaScript"
+                                    class="project-tech-icon">
+                                <img src="./assets/icons/skills-Firebase.svg" alt="Firebase" class="project-tech-icon">
+                            </div>
+                        </div>
+
+                        <div class="project-image-wrapper">
+                            <img src="./assets/img/projects/join.png" alt="Screenshot des Join Projekts"
+                                class="project-image">
+                        </div>
+
+                        <div class="project-actions">
+                            <a href="#" class="btn project-btn project-btn--primary">Live Test</a>
+                            <a href="#" class="btn project-btn project-btn--outline">GitHub</a>
+                        </div>
+                    </div>
+                </article>
+                <article class="project-panel" data-project="el-pollo-loco">
+                    <div class="project-info">
+                        <div class="project-text-block">
+                            <div class="project-headline-row">
+                                <h3>About the project</h3>
+                                <span>Duration: 4 weeks</span>
+                            </div>
+
+                            <p>
+                                El Pollo Loco is a 2D jump-and-run game built with object-oriented JavaScript.
+                                The player collects items, avoids enemies and fights the final boss.
+                            </p>
+                        </div>
+
+                        <div class="project-text-block">
+                            <h3>How I have organised my work process</h3>
+
+                            <p>
+                                The game logic was structured into separate classes for the character,
+                                enemies, objects, the world and collision handling.
+                            </p>
+                        </div>
+
+                        <div class="project-text-block">
+                            <h3>My group work experience</h3>
+
+                            <p>
+                                This project helped me improve my understanding of object-oriented programming,
+                                animations, game loops and interactive browser-based applications.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="project-preview">
+                        <div class="project-technologies">
+                            <span>Technologies</span>
+
+                            <div class="project-tech-icons">
+                                <img src="./assets/icons/skills-HTML.svg" alt="HTML" class="project-tech-icon">
+                                <img src="./assets/icons/skills-CSS.svg" alt="CSS" class="project-tech-icon">
+                                <img src="./assets/icons/skills-JavaScript.svg" alt="JavaScript"
+                                    class="project-tech-icon">
+                            </div>
+                        </div>
+
+                        <div class="project-image-wrapper">
+                            <img src="./assets/img/projects/el-pollo-loco.png"
+                                alt="Screenshot des El Pollo Loco Projekts" class="project-image">
+                        </div>
+
+                        <div class="project-actions">
+                            <a href="#" class="btn project-btn project-btn--primary">Live Test</a>
+                            <a href="#" class="btn project-btn project-btn--outline">GitHub</a>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
         <section id="contact" class="contact"></section>
     </main>
 

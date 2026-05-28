@@ -22,6 +22,7 @@ function init() {
     setupActiveElements('.language-btn');
     setupScrollDownButton();
     setupAboutLocationAnimation();
+    setupProjectTabs();
 }
 
 function setupActiveElements(selector) {
@@ -53,6 +54,35 @@ function setupAboutLocationAnimation() {
 
     prepareAboutLocation(aboutElements);
     observeAboutSection(aboutElements);
+}
+
+function setupProjectTabs() {
+    const projectTabs = document.querySelectorAll('.project-tab');
+    const projectPanels = document.querySelectorAll('.project-panel');
+
+    if (projectTabs.length === 0 || projectPanels.length === 0) return;
+
+    projectTabs.forEach((tab) => {
+        tab.addEventListener('click', () => {
+            const selectedProject = tab.dataset.project;
+
+            activateProjectTab(tab, projectTabs);
+            showProjectPanel(selectedProject, projectPanels);
+        });
+    });
+}
+
+function activateProjectTab(activeTab, projectTabs) {
+    resetActive(projectTabs);
+    setActive(activeTab);
+}
+
+function showProjectPanel(selectedProject, projectPanels) {
+    projectPanels.forEach((panel) => {
+        const isSelectedPanel = panel.dataset.project === selectedProject;
+
+        panel.classList.toggle('active', isSelectedPanel);
+    });
 }
 
 function getAboutLocationElements() {
