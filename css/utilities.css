@@ -1,5 +1,5 @@
 /* ============================= */
-/* Flexbos Utilities             */
+/* Flexbox Utilities             */
 /* ============================= */
 
 .flex-row {
@@ -41,9 +41,6 @@
     max-width: var(--content-max-width);
     margin: 0 auto;
     width: 100%;
-    /* width: 100%;
-    max-width: var(--content-max-width);
-    margin-inline: auto; */
 }
 
 

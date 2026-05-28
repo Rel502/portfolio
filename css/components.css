@@ -52,6 +52,181 @@
     color: var(--color-primary);
 }
 
+/* ============================= */
+/* Header                        */
+/* ============================= */
+
+.header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+
+    width: 100%;
+    background-color: var(--color-primary);
+}
+
+.navbar {
+    max-width: 1040px;
+    height: var(--navbar-height);
+    margin: 0 auto;
+    padding: 0 24px;
+
+    display: grid;
+    grid-template-columns: 72px 1fr 72px;
+    align-items: center;
+}
+
+.nav-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 72px;
+
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.nav-list a {
+    position: relative;
+    z-index: 0;
+    display: inline-block;
+
+    color: var(--color-background);
+    text-decoration: none;
+    font-size: 26px;
+    line-height: 120%;
+    letter-spacing: 0%;
+    font-family: var(--font-body);
+    font-weight: var(--fw-medium);
+}
+
+.nav-list a:hover,
+.nav-list a.active {
+    color: var(--color-secondary);
+}
+
+.nav-list a.active::before {
+    z-index: -1;
+    pointer-events: none;
+    content: "";
+    position: absolute;
+
+    width: 84px;
+    height: 56px;
+
+    background-image: url("../assets/icons/ellipse-24.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.language-switch {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 8px;
+}
+
+.language-btn {
+    position: relative;
+    z-index: 0;
+    display: inline-block;
+
+    border: none;
+    background: transparent;
+    color: var(--color-background);
+    font-family: var(--font-body);
+    font-weight: var(--fw-regular);
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.language-btn.active {
+    color: var(--color-secondary);
+}
+
+.language-btn.active::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    pointer-events: none;
+
+    width: 36px;
+    height: 24px;
+
+    background-image: url("../assets/icons/ellipse-24.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+/* ============================= */
+/* Buttons                       */
+/* ============================= */
+
+.btn {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 12px 40px;
+
+    color: var(--color-primary);
+    text-decoration: none;
+    font-family: var(--font-body);
+    font-weight: var(--fw-regular);
+    font-size: 20px;
+    line-height: 120%;
+
+    border-radius: 999px;
+}
+
+.btn--outline {
+    border: 1px solid var(--color-primary);
+}
+
+.btn--outline:hover {
+    background-color: rgba(248, 245, 236, 0.12);
+}
+
+
+/* ============================= */
+/* Section Layout                */
+/* ============================= */
+
+.section {
+    padding: 96px 120px;
+    max-width: 1040px;
+    box-sizing: border-box;
+}
+
+.section-title {
+    margin: 0 0 72px;
+
+    color: var(--color-primary);
+    font-family: var(--font-headline);
+    font-weight: var(--fw-regular);
+    font-size: 72px;
+    line-height: 120%;
+    text-align: center;
+}
+
+.section-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 96px;
+}
+
 
 /* ============================= */
 /* Social-Links                  */
