@@ -1,0 +1,123 @@
+/* ============================= */
+/* Skills                        */
+/* ============================= */
+
+.skills-content {
+    align-items: center;
+}
+
+.skills-list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 40px;
+    row-gap: 40px;
+    align-items: center;
+    justify-items: center;
+}
+
+.skill-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.skill-icon {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+}
+
+.skills-learning {
+    position: relative;
+
+    width: 360px;
+    height: 360px;
+    padding: 48px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+
+    justify-self: center;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.skills-learning::before,
+.skills-learning::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    pointer-events: none;
+
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+
+    transition: opacity 500ms ease-in-out;
+}
+
+.skills-learning::before {
+    background-image: url("../assets/icons/ellipse-25-default.svg");
+    opacity: 1;
+}
+
+.skills-learning::after {
+    background-image: url("../assets/icons/ellipse-25-hover.svg");
+    opacity: 0;
+}
+
+.skills-learning:hover::before {
+    opacity: 0;
+}
+
+.skills-learning:hover::after {
+    opacity: 1;
+}
+
+.skills-learning>* {
+    position: relative;
+    z-index: 1;
+}
+
+.skills-learning h3 {
+    margin: 0;
+
+    color: var(--color-secondary);
+    font-family: var(--font-body);
+    font-weight: var(--fw-regular);
+    font-size: 18px;
+    line-height: 120%;
+}
+
+.learning-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+}
+
+.learning-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.learning-icon {
+    width: 56px;
+    height: 56px;
+    object-fit: contain;
+}
+
+.skills-learning p {
+    margin: 0;
+
+    color: var(--color-secondary);
+    font-family: var(--font-body);
+    font-weight: var(--fw-regular);
+    font-size: 18px;
+    line-height: 120%;
+}
