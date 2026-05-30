@@ -23,6 +23,7 @@ function init() {
     setupScrollDownButton();
     setupAboutLocationAnimation();
     setupProjectTabs();
+    setupContactForm();
 }
 
 function setupActiveElements(selector) {
@@ -70,6 +71,97 @@ function setupProjectTabs() {
             showProjectPanel(selectedProject, projectPanels);
         });
     });
+}
+
+function setupContactForm() {
+    const contactForm = document.getElementById('contactForm');
+
+    if (!contactForm) return;
+
+    const formFields = contactForm.querySelectorAll('.form-group input, .form-group textarea');
+
+    contactForm.addEventListener('submit', validateContactForm);
+
+    formFields.forEach((field) => {
+        field.addEventListener('input', () => {
+            validateContactField(field);
+        });
+
+        field.addEventListener('change', () => {
+            validateContactField(field);
+        });
+
+        field.addEventListener('animationstart', (event) => {
+            if (event.animationName === 'contactAutofillStart') {
+                validateContactAutofillField(field);
+            }
+        });
+    });
+}
+
+function validateContactAutofillField(field) {
+    setTimeout(() => {
+        validateContactField(field);
+    }, 100);
+}
+
+function validateContactForm(event) {
+    event.preventDefault();
+
+    const contactForm = event.currentTarget;
+    const formFields = contactForm.querySelectorAll('.form-group input, .form-group textarea');
+
+    formFields.forEach((field) => {
+        validateContactField(field);
+    });
+}
+
+function validateContactField(field) {
+    const formGroup = field.closest('.form-group');
+    const isFieldValid = isContactFieldValid(field);
+    const hasFieldValue = field.value.trim() !== '';
+
+    updateContactFieldErrorMessage(field, formGroup);
+
+    formGroup.classList.toggle('form-group--has-value', hasFieldValue);
+    formGroup.classList.toggle('form-group--error', !isFieldValid);
+    formGroup.classList.toggle('form-group--success', isFieldValid);
+}
+
+function updateContactFieldErrorMessage(field, formGroup) {
+    const errorMessage = formGroup.querySelector('.form-error');
+
+    if (!errorMessage) return;
+
+    const fieldValue = field.value.trim();
+    const isEmailField = field.type === 'email';
+
+    if (fieldValue === '') {
+        errorMessage.textContent = errorMessage.dataset.requiredMessage || errorMessage.textContent;
+        return;
+    }
+
+    if (isEmailField && !isValidEmail(fieldValue)) {
+        errorMessage.textContent = errorMessage.dataset.invalidMessage;
+    }
+}
+
+function isContactFieldValid(field) {
+    const fieldValue = field.value.trim();
+
+    if (fieldValue === '') {
+        return false;
+    }
+
+    if (field.type === 'email') {
+        return isValidEmail(fieldValue);
+    }
+
+    return true;
+}
+
+function isValidEmail(email) {
+    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
 }
 
 function activateProjectTab(activeTab, projectTabs) {

@@ -5,6 +5,7 @@
 :root {
     --color-background: #262E34;
     --color-primary: #89BCD9;
+    --color-primary-transparent: rgba(137, 188, 217, 0.12);
     --color-secondary: #F8F5EC;
     --color-inactive: rgba(38, 46, 52, 0.12);
     --color-error: #E44C36;
