@@ -72,12 +72,6 @@
     gap: 24px;
 }
 
-.form-group {
-    display: flex;
-    flex-direction: column;
-    gap: 4px;
-}
-
 .form-group label {
     padding-left: 32px;
 
@@ -164,10 +158,10 @@
 
 .form-group {
     position: relative;
-}
 
-.form-group.form-group--has-value label {
-    visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
 }
 
 .form-group.form-group--error label {
@@ -178,26 +172,52 @@
     opacity: 1;
 }
 
-/* .form-group.form-group--error .form-error {
-    display: block;
-} */
+.form-group::after {
+    content: "";
+    position: absolute;
+    right: 28px;
+    top: 52px;
 
-.form-group.form-group--success input,
-.form-group.form-group--success textarea {
-    border-color: var(--color-primary);
+    width: 20px;
+    height: 20px;
 
     background-image: url("../assets/icons/contact-icon-done.svg");
     background-repeat: no-repeat;
-    background-position: right 28px center;
-    background-size: 20px;
+    background-position: center;
+    background-size: contain;
+
+    opacity: 0;
+    pointer-events: none;
 }
 
-.form-group.form-group--success input {
-    padding-right: 64px;
+.form-group:has(input:not(:placeholder-shown):valid)::after,
+.form-group:has(textarea:not(:placeholder-shown):valid)::after {
+    opacity: 1;
 }
 
-.form-group.form-group--success textarea {
-    padding-right: 64px;
+.form-group:has(input:not(:placeholder-shown)) label,
+.form-group:has(textarea:not(:placeholder-shown)) label {
+    visibility: hidden;
+}
+
+.form-group.form-group--error:has(input:not(:placeholder-shown):valid) .form-error,
+.form-group.form-group--error:has(textarea:not(:placeholder-shown):valid) .form-error {
+    opacity: 0;
+}
+
+.form-group:has(input:not(:placeholder-shown):valid) input,
+.form-group:has(textarea:not(:placeholder-shown):valid) textarea {
+    border-color: var(--color-primary);
+}
+
+.form-group:has(input:valid) label,
+.form-group:has(textarea:valid) label {
+    visibility: hidden;
+}
+
+.form-group.form-group--error:has(input:valid) .form-error,
+.form-group.form-group--error:has(textarea:valid) .form-error {
+    opacity: 0;
 }
 
 .form-group input:-webkit-autofill,
@@ -284,6 +304,15 @@
     background-image: url("../assets/icons/contact-checkbox-checked.svg");
 }
 
+.privacy-check.privacy-check--error input:not(:checked)+span::before {
+    background-image: url("../assets/icons/contact-checkbox-error.svg");
+}
+
+.privacy-check.privacy-check--error:hover input:not(:checked)+span::after,
+.privacy-check.privacy-check--error input:focus-visible:not(:checked)+span::after {
+    opacity: 0;
+}
+
 .privacy-check input:checked+span::after {
     opacity: 0;
 }
@@ -303,14 +332,42 @@
         background-color 180ms ease-in-out;
 }
 
-.contact-form:has(.privacy-check input:checked) .contact-submit-btn {
-    border-color: var(--color-primary);
-    color: var(--color-primary);
+.contact-submit-btn:disabled {
+    cursor: not-allowed;
 }
 
-.contact-form:has(.privacy-check input:checked) .contact-submit-btn:hover,
-.contact-form:has(.privacy-check input:checked) .contact-submit-btn:focus-visible {
+.contact-form:valid .contact-submit-btn {
+    border-color: var(--color-primary);
+    color: var(--color-primary);
+    cursor: pointer;
+}
+
+.contact-form:valid .contact-submit-btn:hover,
+.contact-form:valid .contact-submit-btn:focus-visible {
     background-color: rgba(248, 245, 236, 0.12);
+}
+
+.contact-success-message {
+    margin: 0;
+
+    color: var(--color-done);
+    font-family: var(--font-body);
+    font-weight: var(--fw-regular);
+    font-size: 16px;
+    line-height: 120%;
+    text-align: right;
+
+    opacity: 0;
+    visibility: hidden;
+
+    transition:
+        opacity 180ms ease-in-out,
+        visibility 180ms ease-in-out;
+}
+
+.contact-success-message.is-visible {
+    opacity: 1;
+    visibility: visible;
 }
 
 .privacy-link {
@@ -320,19 +377,4 @@
 
 .privacy-link:hover {
     text-decoration: none;
-}
-
-@keyframes contactAutofillStart {
-    from {
-        opacity: 1;
-    }
-
-    to {
-        opacity: 1;
-    }
-}
-
-.form-group input:-webkit-autofill {
-    animation-name: contactAutofillStart;
-    animation-duration: 1ms;
 }

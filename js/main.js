@@ -79,30 +79,74 @@ function setupContactForm() {
     if (!contactForm) return;
 
     const formFields = contactForm.querySelectorAll('.form-group input, .form-group textarea');
+    const allRequiredFields = contactForm.querySelectorAll('input[required], textarea[required]');
+    const submitButton = contactForm.querySelector('.contact-submit-btn');
+    const privacyCheckbox = contactForm.querySelector('.privacy-check input');
 
     contactForm.addEventListener('submit', validateContactForm);
 
     formFields.forEach((field) => {
         field.addEventListener('input', () => {
             validateContactField(field);
+            updateContactFormState(contactForm, submitButton);
         });
 
         field.addEventListener('change', () => {
             validateContactField(field);
+            updateContactFormState(contactForm, submitButton);
         });
+    });
 
-        field.addEventListener('animationstart', (event) => {
-            if (event.animationName === 'contactAutofillStart') {
-                validateContactAutofillField(field);
-            }
+    allRequiredFields.forEach((field) => {
+        field.addEventListener('change', () => {
+            updateContactFormState(contactForm, submitButton);
         });
+    });
+
+    if (privacyCheckbox) {
+        privacyCheckbox.addEventListener('change', () => {
+            updateContactFormState(contactForm, submitButton);
+        });
+    }
+
+    contactForm.addEventListener('focusin', () => {
+        setTimeout(() => {
+            updateContactFormState(contactForm, submitButton);
+        }, 200);
+    });
+
+    contactForm.addEventListener('click', () => {
+        setTimeout(() => {
+            updateContactFormState(contactForm, submitButton);
+        }, 200);
     });
 }
 
-function validateContactAutofillField(field) {
-    setTimeout(() => {
-        validateContactField(field);
-    }, 100);
+function updateContactFormState(contactForm, submitButton) {
+    updateContactSubmitButton(contactForm, submitButton);
+    updatePrivacyCheckState(contactForm);
+}
+
+function updatePrivacyCheckState(contactForm) {
+    const privacyCheck = contactForm.querySelector('.privacy-check');
+    const privacyCheckbox = contactForm.querySelector('.privacy-check input');
+    const formFields = contactForm.querySelectorAll('.form-group input, .form-group textarea');
+
+    if (!privacyCheck || !privacyCheckbox) return;
+
+    const areContactFieldsValid = Array.from(formFields).every((field) => {
+        return isContactFieldValid(field);
+    });
+
+    const shouldShowPrivacyError = areContactFieldsValid && !privacyCheckbox.checked;
+
+    privacyCheck.classList.toggle('privacy-check--error', shouldShowPrivacyError);
+}
+
+function updateContactSubmitButton(contactForm, submitButton) {
+    if (!submitButton) return;
+
+    submitButton.disabled = !contactForm.checkValidity();
 }
 
 function validateContactForm(event) {
@@ -110,22 +154,56 @@ function validateContactForm(event) {
 
     const contactForm = event.currentTarget;
     const formFields = contactForm.querySelectorAll('.form-group input, .form-group textarea');
+    const submitButton = contactForm.querySelector('.contact-submit-btn');
 
     formFields.forEach((field) => {
         validateContactField(field);
     });
+
+    updateContactFormState(contactForm, submitButton);
+
+    if (!contactForm.checkValidity()) return;
+
+    showContactSuccessMessage(contactForm);
+    resetContactForm(contactForm, submitButton);
+}
+
+function showContactSuccessMessage(contactForm) {
+    const successMessage = contactForm.querySelector('#contactSuccessMessage');
+
+    if (!successMessage) return;
+
+    successMessage.classList.add('is-visible');
+
+    setTimeout(() => {
+        successMessage.classList.remove('is-visible');
+    }, 3000);
+}
+
+function resetContactForm(contactForm, submitButton) {
+    contactForm.reset();
+
+    const formGroups = contactForm.querySelectorAll('.form-group');
+    const privacyCheck = contactForm.querySelector('.privacy-check');
+
+    formGroups.forEach((formGroup) => {
+        formGroup.classList.remove('form-group--error');
+    });
+
+    if (privacyCheck) {
+        privacyCheck.classList.remove('privacy-check--error');
+    }
+
+    updateContactSubmitButton(contactForm, submitButton);
 }
 
 function validateContactField(field) {
     const formGroup = field.closest('.form-group');
     const isFieldValid = isContactFieldValid(field);
-    const hasFieldValue = field.value.trim() !== '';
 
     updateContactFieldErrorMessage(field, formGroup);
 
-    formGroup.classList.toggle('form-group--has-value', hasFieldValue);
     formGroup.classList.toggle('form-group--error', !isFieldValid);
-    formGroup.classList.toggle('form-group--success', isFieldValid);
 }
 
 function updateContactFieldErrorMessage(field, formGroup) {
@@ -161,7 +239,7 @@ function isContactFieldValid(field) {
 }
 
 function isValidEmail(email) {
-    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+    return /^[^\s@]+@[^\s@]+\.[A-Za-z]{2,}$/.test(email);
 }
 
 function activateProjectTab(activeTab, projectTabs) {
