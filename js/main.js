@@ -23,7 +23,10 @@ function init() {
     setupScrollDownButton();
     setupAboutLocationAnimation();
     setupProjectTabs();
-    setupContactForm();
+
+    if (typeof setupContactForm === 'function') {
+        setupContactForm();
+    }
 }
 
 function setupActiveElements(selector) {
