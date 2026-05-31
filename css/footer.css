@@ -51,6 +51,10 @@
     color: var(--color-background);
 }
 
+footer .logo-name {
+    color: var(--color-secondary);
+}
+
 .footer-socials {
     display: flex;
     justify-content: flex-end;
