@@ -1,3 +1,5 @@
+const CONTACT_FORM_ENDPOINT = 'https://michaelzeitler.de/send-mail.php';
+
 function setupContactForm() {
     const contactForm = document.getElementById('contactForm');
 
@@ -115,7 +117,7 @@ function getContactFormFields(contactForm) {
     return contactForm.querySelectorAll('.form-group input, .form-group textarea');
 }
 
-function validateContactForm(event, submitButton) {
+async function validateContactForm(event, submitButton) {
     event.preventDefault();
 
     const contactForm = event.currentTarget;
@@ -125,8 +127,42 @@ function validateContactForm(event, submitButton) {
 
     if (!contactForm.checkValidity()) return;
 
-    showContactSuccessMessage(contactForm);
-    resetContactForm(contactForm, submitButton);
+    if (submitButton) {
+        submitButton.disabled = true;
+    }
+
+    try {
+        const response = await sendContactMessage(contactForm);
+
+        if (!response.ok) {
+            throw new Error('Message could not be sent.');
+        }
+
+        showContactSuccessMessage(contactForm);
+        resetContactForm(contactForm, submitButton);
+    } catch (error) {
+        console.error(error);
+        alert('Your message could not be sent. Please try again later.');
+        updateContactFormState(contactForm, submitButton);
+    }
+}
+
+function sendContactMessage(contactForm) {
+    const formData = new FormData(contactForm);
+
+    const contactData = {
+        name: formData.get('name').trim(),
+        email: formData.get('email').trim(),
+        message: formData.get('message').trim()
+    };
+
+    return fetch(CONTACT_FORM_ENDPOINT, {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(contactData)
+    });
 }
 
 function validateContactFormFields(contactForm) {
