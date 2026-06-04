@@ -331,6 +331,15 @@
 }
 
 @media (max-width: 768px) {
+    .section {
+        padding: 80px 24px 0;
+    }
+
+    .section-title {
+        margin: 0 0 32px;
+        font-size: 32px;
+    }
+
     .header {
         position: absolute;
         top: 0;
