@@ -23,10 +23,39 @@ function init() {
     setupScrollDownButton();
     setupAboutLocationAnimation();
     setupProjectTabs();
+    setupMobileMenu();
 
     if (typeof setupContactForm === 'function') {
         setupContactForm();
     }
+}
+
+function setupMobileMenu() {
+    const mobileMenu = getMobileMenuElements();
+
+    if (!mobileMenu) return;
+
+    mobileMenu.burgerButton.addEventListener('click', () => {
+        toggleMobileMenu(mobileMenu);
+    });
+}
+
+function getMobileMenuElements() {
+    const burgerButton = document.querySelector('.burger-btn');
+    const navbarMenu = document.getElementById('navbarMenu');
+
+    if (!burgerButton || !navbarMenu) return null;
+
+    return { burgerButton, navbarMenu };
+}
+
+function toggleMobileMenu(mobileMenu) {
+    const isOpen = mobileMenu.navbarMenu.classList.toggle('is-open');
+
+    mobileMenu.burgerButton.classList.toggle('is-open', isOpen);
+    mobileMenu.burgerButton.setAttribute('aria-expanded', isOpen);
+
+    document.body.classList.toggle('mobile-menu-open', isOpen);
 }
 
 function setupActiveElements(selector) {

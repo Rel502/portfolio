@@ -148,14 +148,15 @@
     }
 
     .hero {
+        padding: 56px;
         min-height: 100vh;
-        padding: 104px 18px 20px;
         box-sizing: border-box;
         overflow: hidden;
 
         display: flex;
         flex-direction: column;
         align-items: stretch;
+        justify-content: flex-end;
     }
 
     .hero-left,
@@ -187,7 +188,7 @@
     .hero-image-wrapper::after {
         width: 115%;
         height: 115%;
-        top: 55%;
+        top: 54%;
     }
 
     .hero-socials,
@@ -226,5 +227,10 @@
         margin: 20px auto 0;
         grid-row: auto;
         align-self: center;
+    }
+
+    body.mobile-menu-open .hero-left {
+        opacity: 0;
+        pointer-events: none;
     }
 }
