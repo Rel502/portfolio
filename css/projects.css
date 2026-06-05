@@ -209,3 +209,130 @@
     top: 2px;
     left: 0;
 }
+
+/* ============================= */
+/* Projects Mobile               */
+/* ============================= */
+
+@media (max-width: 768px) {
+    .projects-tabs {
+        width: calc(100% + 48px);
+        margin-left: -24px;
+        margin-right: -24px;
+        box-sizing: border-box;
+
+        justify-content: flex-start;
+        gap: 0;
+    }
+
+    .project-tab {
+        flex: 1 1 0;
+        min-width: 0;
+
+        padding: 14px 6px;
+        font-size: 16px;
+        text-align: center;
+        white-space: normal;
+    }
+
+    .project-tab.active {
+        padding: 14px 6px;
+        border-radius: 16px 16px 0 0;
+    }
+
+    .project-panel.active {
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+
+        min-height: auto;
+        padding: 32px 24px;
+    }
+
+    .project-preview {
+        order: 1;
+        width: 100%;
+        gap: 20px;
+    }
+
+    .project-info {
+        order: 2;
+        gap: 32px;
+    }
+
+    .project-text-block {
+        padding-left: 40px;
+    }
+
+    .project-text-block h3 {
+        font-size: 20px;
+    }
+
+    .project-text-block p {
+        font-size: 16px;
+        line-height: 130%;
+    }
+
+    .project-text-block::before {
+        width: 24px;
+        height: 24px;
+    }
+
+    .project-actions {
+        width: 100%;
+        gap: 16px;
+    }
+
+    .project-btn {
+        flex: 1;
+        min-width: 0;
+        padding: 10px 16px;
+        font-size: 16px;
+    }
+
+    .project-technologies {
+        gap: 8px;
+    }
+
+    .project-tech-icons {
+        gap: 14px;
+    }
+
+    .project-tech-icon {
+        width: 32px;
+        height: 32px;
+    }
+
+    .project-image-wrapper {
+        border-radius: 16px;
+        aspect-ratio: 16 / 9;
+    }
+
+    .project-headline-row {
+        flex-direction: column;
+        gap: 4px;
+    }
+
+    .project-headline-row span {
+        font-size: 14px;
+        white-space: normal;
+    }
+
+    .projects-content {
+        width: calc(100% + 48px);
+        margin-left: -24px;
+        margin-right: -24px;
+    }
+
+    .projects-tabs:has(.project-tab:first-child.active)+.projects-content {
+        border-radius: 0 16px 16px 16px;
+    }
+
+    .projects-tabs:has(.project-tab:last-child.active)+.projects-content {
+        border-radius: 16px 0 16px 16px;
+    }
+
+    .projects-tabs:has(.project-tab:not(:first-child):not(:last-child).active)+.projects-content {
+        border-radius: 16px;
+    }
+}
