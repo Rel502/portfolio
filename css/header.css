@@ -1,0 +1,266 @@
+/* ============================= */
+/* Header                        */
+/* ============================= */
+
+.header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+
+    width: 100%;
+    background-color: var(--color-primary);
+}
+
+.navbar {
+    max-width: 1040px;
+    height: var(--navbar-height);
+    margin: 0 auto;
+    padding: 0 24px;
+
+    display: grid;
+    grid-template-columns: 72px 1fr 72px;
+    align-items: center;
+}
+
+.navbar-menu {
+    display: contents;
+}
+
+.mobile-menu-content {
+    display: contents;
+}
+
+.burger-btn {
+    display: none;
+}
+
+.nav-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 72px;
+
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.nav-list a {
+    position: relative;
+    z-index: 0;
+    display: inline-block;
+
+    color: var(--color-background);
+    text-decoration: none;
+    font-size: 26px;
+    line-height: 120%;
+    letter-spacing: 0%;
+    font-family: var(--font-body);
+    font-weight: var(--fw-regular);
+}
+
+.nav-list a:hover,
+.nav-list a.active {
+    color: var(--color-secondary);
+}
+
+.nav-list a.active::before {
+    z-index: -1;
+    pointer-events: none;
+    content: "";
+    position: absolute;
+
+    width: 84px;
+    height: 56px;
+
+    background-image: url("../assets/icons/ellipse-24.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.language-switch {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 8px;
+}
+
+.language-btn {
+    position: relative;
+    z-index: 0;
+    display: inline-block;
+
+    border: none;
+    background: transparent;
+    color: var(--color-background);
+    font-family: var(--font-body);
+    font-weight: var(--fw-regular);
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.language-btn.active {
+    color: var(--color-secondary);
+}
+
+.language-btn.active::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    pointer-events: none;
+
+    width: 36px;
+    height: 24px;
+
+    background-image: url("../assets/icons/ellipse-24.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+/* ============================= */
+/* Mobile Navigation             */
+/* ============================= */
+
+@media (max-width: 768px) {
+    .header {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 200;
+
+        background-color: transparent;
+    }
+
+    .navbar {
+        position: relative;
+
+        height: auto;
+        padding: 32px 39px;
+
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+
+    .navbar .logo,
+    .burger-btn {
+        position: relative;
+        z-index: 220;
+    }
+
+    .navbar .logo {
+        color: var(--color-primary);
+    }
+
+    .navbar-menu {
+        position: absolute;
+        top: 120px;
+        left: 39px;
+        right: 39px;
+        z-index: 210;
+
+        display: none;
+
+        aspect-ratio: 580 / 616;
+
+        background-image: url("../assets/icons/ellipse-hero-default.svg");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+    }
+
+    .navbar-menu.is-open {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .navbar-menu .mobile-menu-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        width: 100%;
+        height: 100%;
+    }
+
+    .navbar-menu .nav-list {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 28px;
+
+        margin: 0;
+        padding: 0;
+    }
+
+    .navbar-menu .nav-list a {
+        color: var(--color-background);
+        font-size: 22px;
+    }
+
+    .navbar-menu .nav-list a:hover,
+    .navbar-menu .nav-list a.active {
+        color: var(--color-background);
+    }
+
+    .navbar-menu .nav-list a.active::before {
+        display: none;
+    }
+
+    .navbar-menu .language-switch {
+        justify-content: center;
+        margin-top: 28px;
+    }
+
+    .navbar-menu .language-btn {
+        color: var(--color-background);
+        font-size: 18px;
+    }
+
+    .burger-btn {
+        width: 40px;
+        height: 32px;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        padding: 0;
+        border: none;
+        background: transparent;
+        cursor: pointer;
+    }
+
+    .burger-btn:focus {
+        outline: none;
+    }
+
+    .burger-btn:focus-visible {
+        outline: 2px solid var(--color-primary);
+        outline-offset: 8px;
+    }
+
+    .burger-btn span {
+        width: 100%;
+        height: 2px;
+
+        display: block;
+
+        background-color: var(--color-secondary);
+        border-radius: 999px;
+    }
+}
