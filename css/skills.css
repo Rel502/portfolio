@@ -122,6 +122,10 @@
     line-height: 120%;
 }
 
+.skills-contact-btn {
+    display: none;
+}
+
 /* ============================= */
 /* Skills Mobile                 */
 /* ============================= */
@@ -220,5 +224,21 @@
     .learning-icon {
         width: 40px;
         height: 40px;
+    }
+
+    .skills-contact-btn {
+        width: fit-content;
+        margin: 40px auto 0;
+
+        display: flex;
+
+        background-color: var(--color-primary);
+        color: var(--color-background);
+        font-size: 14px;
+    }
+
+    .skills-contact-btn:active {
+        background-color: var(--color-secondary);
+        color: var(--color-background);
     }
 }
