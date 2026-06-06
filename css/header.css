@@ -227,7 +227,8 @@
     }
 
     .navbar-menu .language-btn {
-        color: var(--color-background);
+        /* color: var(--color-background); */
+        color: var(--color-secondary);
         font-size: 18px;
     }
 

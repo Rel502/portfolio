@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="./css/base.css">
     <link rel="stylesheet" href="./css/utilities.css">
     <link rel="stylesheet" href="./css/components.css">
+    <link rel="stylesheet" href="./css/header.css">
     <link rel="stylesheet" href="./css/legal.css">
     <link rel="stylesheet" href="./css/footer.css">
     <script src="./js/main.js" defer></script>
@@ -28,22 +29,35 @@
                 </span>
             </a>
 
-            <ul class="nav-list">
-                <li><a href="./index.html#about">Why me</a></li>
-                <li><a href="./index.html#skills">Skills</a></li>
-                <li><a href="./index.html#projects">Projects</a></li>
-                <li><a href="./index.html#contact">Contact</a></li>
-            </ul>
+            <div class="navbar-menu" id="navbarMenu">
+                <div class="mobile-menu-content">
+                    <ul class="nav-list">
+                        <li><a href="./index.html#about">About me</a></li>
+                        <li><a href="./index.html#skills">Skills</a></li>
+                        <li><a href="./index.html#projects">Projects</a></li>
+                        <li><a href="./index.html#contact">Contact</a></li>
+                    </ul>
 
-            <div class="language-switch">
-                <button type="button" class="language-btn">DE</button>
-                <button type="button" class="language-btn active">EN</button>
+                    <div class="language-switch">
+                        <button type="button" class="language-btn">DE</button>
+                        <button type="button" class="language-btn active">EN</button>
+                    </div>
+                </div>
             </div>
+
+            <button class="burger-btn" type="button" aria-label="Menü öffnen" aria-controls="navbarMenu"
+                aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
         </nav>
     </header>
 
     <main class="legal-page">
         <section class="legal-content u-content-limit">
+
+            <a href="./index.html#contact" class="legal-back-link" aria-label="Zurück zur Kontaktsektion">←</a>
 
             <h1>Legal Notice</h1>
 
