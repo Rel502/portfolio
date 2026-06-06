@@ -78,12 +78,20 @@
         padding: 128px 30px 80px;
     }
 
-    .legal-back-link {
+    .legal-content .legal-back-link {
+        width: 60px;
+        height: 30px;
         margin-bottom: 20px;
+        transform: translateX(-10px);
 
-        color: var(--color-primary);
-        font-size: 48px;
-        line-height: 1;
+        display: inline-flex;
+
+        font-size: 0;
+
+        background-image: url("../assets/icons/arrow-back-mobile.svg");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
     }
 
     .legal-content h1 {
