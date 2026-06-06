@@ -118,3 +118,90 @@
 .contact-link--phone:focus-visible::before {
     background-image: url("../assets/icons/icon-phone-hover.svg");
 }
+
+.contact-form-headline {
+    display: none;
+}
+
+/* ============================= */
+/* Contact Mobile                */
+/* ============================= */
+
+@media (max-width: 768px) {
+    .contact-intro {
+        display: flex;
+        flex-direction: column;
+        gap: 32px;
+
+        margin-bottom: 0;
+    }
+
+    .contact-details {
+        order: 1;
+        gap: 14px;
+    }
+
+    .contact-intro p {
+        order: 2;
+    }
+
+    .contact-intro p {
+        font-size: 16px;
+    }
+
+    .contact-link {
+        font-size: 18px;
+        display: flex;
+        justify-content: flex-start;
+        gap: 8px;
+    }
+
+    .contact-form-headline {
+        display: block;
+
+        margin: 32px 0;
+
+        color: var(--color-primary);
+        font-family: var(--font-body);
+        font-weight: var(--fw-regular);
+        font-size: 20px;
+        line-height: 120%;
+        text-align: center;
+    }
+
+    .contact {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .contact-header {
+        display: contents;
+    }
+
+    .contact-header .section-title {
+        order: 1;
+    }
+
+    .contact-intro {
+        order: 2;
+    }
+
+    .contact-form-headline {
+        order: 3;
+    }
+
+    .contact-form {
+        order: 4;
+    }
+
+    .contact-scroll-top {
+        position: static;
+        order: 5;
+        align-self: center;
+
+        margin-top: 32px;
+        margin-bottom: 80px;
+        width: 30px;
+        height: 60px;
+    }
+}

@@ -222,8 +222,8 @@
     }
 
     .scroll-down {
-        width: 34px;
-        height: 80px;
+        width: 40px;
+        height: 90px;
         margin: 20px auto 0;
         grid-row: auto;
         align-self: center;
