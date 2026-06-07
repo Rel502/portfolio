@@ -194,6 +194,45 @@
 
 
 /* ============================= */
+/* Section Layout Tablet         */
+/* ============================= */
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    .section {
+        padding: 96px 48px;
+    }
+
+    .section-title {
+        margin: 0 0 56px;
+        font-size: 56px;
+    }
+
+    .section-content {
+        gap: 48px;
+    }
+}
+
+
+/* ============================= */
+/* Section Layout Small Desktop  */
+/* ============================= */
+
+@media (min-width: 1025px) and (max-width: 1199px) {
+    .section {
+        padding: 96px 64px;
+    }
+
+    .section-title {
+        font-size: 64px;
+    }
+
+    .section-content {
+        gap: 64px;
+    }
+}
+
+
+/* ============================= */
 /* Section Layout Mobile         */
 /* ============================= */
 

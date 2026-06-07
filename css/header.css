@@ -129,10 +129,31 @@
 
 
 /* ============================= */
+/* Header Small Desktop          */
+/* ============================= */
+
+@media (min-width: 1025px) and (max-width: 1199px) {
+    .navbar {
+        max-width: 100%;
+        padding: 0 48px;
+        grid-template-columns: 88px 1fr 88px;
+    }
+
+    .nav-list {
+        gap: 40px;
+    }
+
+    .nav-list a {
+        font-size: 22px;
+    }
+}
+
+
+/* ============================= */
 /* Mobile Navigation             */
 /* ============================= */
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
     .header {
         position: absolute;
         top: 0;

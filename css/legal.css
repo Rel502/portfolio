@@ -9,26 +9,14 @@
 
 .legal-content {
     max-width: 1200px;
-    padding: 96px 120px;
+    padding: 65px 120px 96px;
     box-sizing: border-box;
 
     color: var(--color-secondary);
 }
 
 .legal-back-link {
-    display: inline-block;
-    margin-bottom: 64px;
-
-    color: var(--color-primary);
-    font-family: var(--font-body);
-    font-weight: var(--fw-regular);
-    font-size: 20px;
-    line-height: 120%;
-    text-decoration: none;
-}
-
-.legal-back-link:hover {
-    color: var(--color-secondary);
+    display: none;
 }
 
 .legal-content h1 {
@@ -73,7 +61,7 @@
     color: var(--color-primary);
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
     .legal-content {
         padding: 128px 30px 80px;
     }

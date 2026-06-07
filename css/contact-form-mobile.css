@@ -2,7 +2,7 @@
 /* Contact Form Mobile           */
 /* ============================= */
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
     .contact-form {
         gap: 6px;
     }

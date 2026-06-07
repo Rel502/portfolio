@@ -123,11 +123,28 @@
     display: none;
 }
 
+
+/* ============================= */
+/* Contact Small Desktop         */
+/* ============================= */
+
+@media (min-width: 1025px) and (max-width: 1199px) {
+    .contact-intro {
+        gap: 48px;
+    }
+
+    .contact-link {
+        font-size: 20px;
+        gap: 16px;
+    }
+}
+
+
 /* ============================= */
 /* Contact Mobile                */
 /* ============================= */
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
     .contact-intro {
         display: flex;
         flex-direction: column;

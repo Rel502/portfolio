@@ -214,7 +214,7 @@
 /* Projects Mobile               */
 /* ============================= */
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
     .projects-tabs {
         width: calc(100% + 48px);
         margin-left: -24px;
@@ -338,5 +338,64 @@
 
     .projects-tabs:has(.project-tab:not(:first-child):not(:last-child).active)+.projects-content {
         border-radius: 16px;
+    }
+}
+
+
+/* ============================= */
+/* Projects Tablet Refinement    */
+/* ============================= */
+
+@media (min-width: 769px) and (max-width: 1024px) {
+
+    .projects-tabs,
+    .projects-content {
+        width: 100%;
+        max-width: 760px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .project-panel.active {
+        padding: 40px 48px;
+        gap: 48px;
+    }
+
+    .project-image-wrapper {
+        max-width: 560px;
+        margin: 0 auto;
+    }
+
+    .project-info {
+        max-width: 640px;
+        margin: 0 auto;
+    }
+
+    .project-actions {
+        max-width: 560px;
+        margin: 0 auto;
+    }
+}
+
+/* ============================= */
+/* Projects Small Desktop        */
+/* ============================= */
+
+@media (min-width: 1025px) and (max-width: 1199px) {
+    .project-preview {
+        align-self: center;
+    }
+
+    .projects-tabs {
+        gap: 24px;
+    }
+
+    .project-tab {
+        padding: 20px 24px;
+        font-size: 24px;
+    }
+
+    .project-tab.active {
+        padding: 20px 24px;
     }
 }

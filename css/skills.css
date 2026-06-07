@@ -130,7 +130,7 @@
 /* Skills Mobile                 */
 /* ============================= */
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
     .skills-content {
         display: flex;
         flex-direction: column;
@@ -240,5 +240,44 @@
     .skills-contact-btn:active {
         background-color: var(--color-secondary);
         color: var(--color-background);
+    }
+}
+
+
+/* ============================= */
+/* Skills Tablet Refinement      */
+/* ============================= */
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    .skills-content {
+        max-width: 720px;
+        margin: 0 auto;
+        align-items: center;
+        gap: 48px;
+    }
+
+    .skills-list {
+        max-width: 440px;
+        margin: 0 auto;
+        justify-content: center;
+        column-gap: 40px;
+        row-gap: 32px;
+    }
+
+    .skills-learning {
+        max-width: 640px;
+        margin: 0 auto;
+
+        justify-content: center;
+        column-gap: 32px;
+    }
+
+    .skills-learning p {
+        flex: 0 1 360px;
+        text-align: center;
+    }
+
+    .learning-icons {
+        flex: 0 0 150px;
     }
 }

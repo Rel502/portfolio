@@ -91,7 +91,7 @@ footer .logo-name {
     opacity: 100%;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
     .footer-content {
         min-height: auto;
         padding: 30px 24px 32px;
