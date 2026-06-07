@@ -190,26 +190,7 @@
     }
 
     .navbar-menu {
-        position: absolute;
-        top: 120px;
-        left: 39px;
-        right: 39px;
-        z-index: 210;
-
         display: none;
-
-        aspect-ratio: 580 / 616;
-
-        background-image: url("../assets/icons/ellipse-hero-default.svg");
-        background-repeat: no-repeat;
-        background-position: center;
-        background-size: contain;
-    }
-
-    .navbar-menu.is-open {
-        display: flex;
-        justify-content: center;
-        align-items: center;
     }
 
     .navbar-menu .mobile-menu-content {
@@ -259,11 +240,11 @@
 
     .burger-btn {
         width: 40px;
-        height: 32px;
+        height: 40px;
 
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
 
         padding: 0;
         border: none;
@@ -280,13 +261,9 @@
         outline-offset: 8px;
     }
 
-    .burger-btn span {
-        width: 100%;
-        height: 2px;
-
+    .burger-icon {
+        width: 40px;
+        height: 40px;
         display: block;
-
-        background-color: var(--color-secondary);
-        border-radius: 999px;
     }
 }

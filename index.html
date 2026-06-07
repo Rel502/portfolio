@@ -21,6 +21,7 @@
     <link rel="stylesheet" href="./css/contact-form-mobile.css">
     <link rel="stylesheet" href="./css/footer.css">
     <script src="./js/contactform.js" defer></script>
+    <script src="./js/mobile-menu.js" defer></script>
     <script src="./js/main.js" defer></script>
 </head>
 
@@ -30,6 +31,20 @@
             <div class="hero-left">
                 <div class="hero-image-wrapper">
                     <img src="./assets/img/profile-transparent.png" alt="Foto von M. Zeitler" class="hero-image">
+
+                    <nav class="mobile-hero-menu" id="mobileHeroMenu" aria-label="Mobile Navigation">
+                        <ul class="mobile-hero-menu-list">
+                            <li><a href="#about">About me</a></li>
+                            <li><a href="#skills">Skills</a></li>
+                            <li><a href="#projects">Projects</a></li>
+                            <li><a href="#contact">Contact</a></li>
+                        </ul>
+
+                        <div class="mobile-hero-language-switch">
+                            <button type="button" class="language-btn">DE</button>
+                            <button type="button" class="language-btn active">EN</button>
+                        </div>
+                    </nav>
                 </div>
             </div>
 
@@ -89,11 +104,9 @@
                 </div>
             </div>
 
-            <button class="burger-btn" type="button" aria-label="Menü öffnen" aria-controls="navbarMenu"
+            <button class="burger-btn" type="button" aria-label="Menü öffnen" aria-controls="mobileHeroMenu"
                 aria-expanded="false">
-                <span></span>
-                <span></span>
-                <span></span>
+                <img src="./assets/icons/burger-menu-default.svg" alt="" class="burger-icon">
             </button>
         </nav>
     </header>
@@ -178,7 +191,7 @@
                     </p>
                 </div>
             </div>
-            
+
             <a href="#contact" class="btn skills-contact-btn">Let's talk</a>
         </section>
 

@@ -222,3 +222,30 @@
         height: 60px;
     }
 }
+
+
+/* ============================= */
+/* Contact Tablet Refinement     */
+/* ============================= */
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .contact-scroll-top {
+        width: 48px;
+        height: 108px;
+        margin-top: 48px;
+    }
+
+    .contact-intro p {
+        font-size: 20px;
+        line-height: 130%;
+    }
+
+    .contact-link {
+        font-size: 22px;
+        gap: 16px;
+    }
+
+    .contact-form-headline {
+        font-size: 26px;
+    }
+}

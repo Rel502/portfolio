@@ -91,6 +91,11 @@ footer .logo-name {
     opacity: 100%;
 }
 
+
+/* ============================= */
+/* Footer Mobile Refinement      */
+/* ============================= */
+
 @media (max-width: 1024px) {
     .footer-content {
         min-height: auto;
@@ -155,5 +160,18 @@ footer .logo-name {
     .footer-social-link--linkedin:hover,
     .footer-social-link--linkedin:active {
         background-image: url("../assets/icons/linkedin-footer-mobile-onpress.svg");
+    }
+}
+
+
+/* ============================= */
+/* Footer Tablet Refinement      */
+/* ============================= */
+
+@media (min-width: 768px) and (max-width: 1024px) {
+
+    .footer-legal a,
+    .footer-legal p {
+        font-size: 18px;
     }
 }

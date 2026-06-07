@@ -97,3 +97,20 @@
         display: none;
     }
 }
+
+
+/* ============================= */
+/* About Tablet Refinement       */
+/* ============================= */
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .about-location p {
+        font-size: 26px;
+    }
+
+    .about-text p {
+        max-width: 640px;
+        font-size: 20px;
+        line-height: 130%;
+    }
+}

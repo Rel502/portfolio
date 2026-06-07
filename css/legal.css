@@ -61,6 +61,11 @@
     color: var(--color-primary);
 }
 
+
+/* ============================= */
+/* Legal Mobile Refinement       */
+/* ============================= */
+
 @media (max-width: 1024px) {
     .legal-content {
         padding: 128px 30px 80px;
@@ -107,5 +112,19 @@
     .legal-content a {
         font-size: 16px;
         line-height: 130%;
+    }
+}
+
+
+/* ============================= */
+/* Legal Tablet Refinement       */
+/* ============================= */
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    .legal-content .legal-back-link {
+        width: 72px;
+        height: 36px;
+        margin-bottom: 28px;
+        transform: translateX(-12px);
     }
 }

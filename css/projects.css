@@ -230,7 +230,7 @@
         min-width: 0;
 
         padding: 14px 6px;
-        font-size: 16px;
+        font-size: 15px;
         text-align: center;
         white-space: normal;
     }
@@ -346,7 +346,7 @@
 /* Projects Tablet Refinement    */
 /* ============================= */
 
-@media (min-width: 769px) and (max-width: 1024px) {
+@media (min-width: 768px) and (max-width: 1024px) {
 
     .projects-tabs,
     .projects-content {
@@ -374,6 +374,24 @@
     .project-actions {
         max-width: 560px;
         margin: 0 auto;
+    }
+
+    .project-btn {
+        padding: 12px 28px;
+        font-size: 18px;
+    }
+
+    .project-text-block h3 {
+        font-size: 24px;
+    }
+
+    .project-text-block p {
+        font-size: 18px;
+        line-height: 130%;
+    }
+
+    .project-headline-row span {
+        font-size: 16px;
     }
 }
 
