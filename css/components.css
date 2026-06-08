@@ -52,6 +52,47 @@
     color: var(--color-primary);
 }
 
+.logo--hero .hero-logo-mark {
+    height: 48px;
+
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+
+    gap: 0;
+}
+
+.logo--hero .hero-logo-part {
+    width: auto;
+    display: block;
+}
+
+.hero-logo-brace-left {
+    transform: translateX(22px);
+}
+
+.hero-logo-brace-right {
+    transform: translateX(-22px);
+}
+
+.logo--hero .hero-logo-frame {
+    height: 48px;
+}
+
+.logo--hero .hero-logo-brace-left,
+.logo--hero .hero-logo-brace-right {
+    height: 24px;
+}
+
+.logo--hero .hero-logo-frame {
+    transform-origin: center;
+    transition: transform 220ms ease-in-out;
+}
+
+.logo--hero:hover .hero-logo-frame {
+    transform: scaleX(1.16);
+}
+
 
 /* ============================= */
 /* Buttons                       */
