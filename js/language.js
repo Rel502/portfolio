@@ -1,5 +1,7 @@
 // Language switch logic
 
+let currentTranslations = {};
+
 function setupLanguageSwitch() {
     const languageButtons = document.querySelectorAll('.language-btn[data-lang]');
 
@@ -26,7 +28,17 @@ async function loadLanguageFile(language) {
     const response = await fetch(`./i18n/${language}.json`);
     const translations = await response.json();
 
+    currentTranslations = translations;
+    document.documentElement.lang = language;
     translatePage(translations);
+}
+
+function getCurrentTranslation(key, fallbackText) {
+    const translatedText = getTranslation(currentTranslations, key);
+
+    if (!translatedText) return fallbackText;
+
+    return translatedText;
 }
 
 function getTranslation(translations, key) {
@@ -39,7 +51,43 @@ function getTranslation(translations, key) {
 
 function translatePage(translations) {
     translateTextContent(translations);
+    translateHtmlContent(translations);
     translateAriaLabels(translations);
+    translateFormMessages(translations);
+}
+
+function translateHtmlContent(translations) {
+    const translatableElements = document.querySelectorAll('[data-i18n-html]');
+
+    translatableElements.forEach((element) => {
+        const translationKey = element.dataset.i18nHtml;
+        const translatedHtml = getTranslation(translations, translationKey);
+
+        if (!translatedHtml) return;
+
+        element.innerHTML = translatedHtml;
+    });
+}
+
+function translateFormMessages(translations) {
+    const translatableElements = document.querySelectorAll('[data-i18n-required-message], [data-i18n-invalid-message]');
+
+    translatableElements.forEach((element) => {
+        translateDataAttribute(element, translations, 'i18nRequiredMessage', 'requiredMessage');
+        translateDataAttribute(element, translations, 'i18nInvalidMessage', 'invalidMessage');
+    });
+}
+
+function translateDataAttribute(element, translations, i18nDatasetKey, targetDatasetKey) {
+    const translationKey = element.dataset[i18nDatasetKey];
+
+    if (!translationKey) return;
+
+    const translatedText = getTranslation(translations, translationKey);
+
+    if (!translatedText) return;
+
+    element.dataset[targetDatasetKey] = translatedText;
 }
 
 function translateTextContent(translations) {

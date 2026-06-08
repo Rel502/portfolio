@@ -1,11 +1,13 @@
 const ABOUT_LOCATION_ITEMS = [
     {
         icon: './assets/icons/location-web.svg',
-        text: 'I am based in Frankfurt.'
+        textKey: 'about.locationWeb',
+        fallbackText: 'I am based in Frankfurt.'
     },
     {
         icon: './assets/icons/location-remote.svg',
-        text: 'I am open to remote work.'
+        textKey: 'about.locationRemote',
+        fallbackText: 'I am open to remote work.'
     }
 ];
 
@@ -119,7 +121,8 @@ async function startAboutLocationLoop(iconElement, textElement) {
 }
 
 async function animateAboutLocationText(textElement, currentIndex) {
-    const currentText = ABOUT_LOCATION_ITEMS[currentIndex].text;
+    const currentItem = ABOUT_LOCATION_ITEMS[currentIndex];
+    const currentText = getCurrentTranslation(currentItem.textKey, currentItem.fallbackText);
 
     await typeText(textElement, currentText);
     await wait(TEXT_VISIBLE_DURATION);

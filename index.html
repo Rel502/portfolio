@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="de">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
@@ -33,7 +33,8 @@
                 <div class="hero-image-wrapper">
                     <img src="./assets/img/profile-transparent.png" alt="Foto von M. Zeitler" class="hero-image">
 
-                    <nav class="mobile-hero-menu" id="mobileHeroMenu" aria-label="Mobile Navigation">
+                    <nav class="mobile-hero-menu" id="mobileHeroMenu" aria-label="Mobile navigation"
+                        data-i18n-aria-label="aria.mobileNavigation">
                         <ul class="mobile-hero-menu-list">
                             <li><a href="#about" data-i18n="nav.about">About me</a></li>
                             <li><a href="#skills" data-i18n="nav.skills">Skills</a></li>
@@ -52,11 +53,13 @@
             <div class="hero-right">
                 <div class="hero-socials">
                     <a href="mailto:deine-mail@example.com" class="social-link social-link--email"
-                        aria-label="E-Mail schreiben"></a>
+                        aria-label="Write an email" data-i18n-aria-label="aria.email"></a>
 
-                    <a href="#" class="social-link social-link--github" aria-label="GitHub Profil öffnen"></a>
+                    <a href="#" class="social-link social-link--github" aria-label="Open GitHub profile"
+                        data-i18n-aria-label="aria.github"></a>
 
-                    <a href="#" class="social-link social-link--linkedin" aria-label="LinkedIn Profil öffnen"></a>
+                    <a href="#" class="social-link social-link--linkedin" aria-label="Open LinkedIn profile"
+                        data-i18n-aria-label="aria.linkedin"></a>
                 </div>
 
                 <div class="hero-logo logo logo--hero">
@@ -68,7 +71,7 @@
 
                     <span class="logo-text">
                         <span class="logo-name">M. Zeitler</span>
-                        <span class="logo-role">developer</span>
+                        <span class="logo-role" data-i18n="common.role">developer</span>
                     </span>
                 </div>
 
@@ -77,7 +80,7 @@
                     <p data-i18n="hero.subtitle">Frontend Developer</p>
                 </div>
 
-                <a href="#about" class="scroll-down" aria-label="Zur nächsten Section scrollen"
+                <a href="#about" class="scroll-down" aria-label="Scroll to next section"
                     data-i18n-aria-label="hero.scrollDown"></a>
             </div>
         </section>
@@ -85,12 +88,12 @@
 
     <header class="header">
         <nav class="navbar">
-            <a href="#hero" class="logo" aria-label="Zur Startseite">
+            <a href="#hero" class="logo" aria-label="Go to homepage" data-i18n-aria-label="aria.home">
                 <img src="./assets/icons/logo-dark-mob.svg" alt="" class="logo-icon">
 
                 <span class="logo-text">
                     <span class="logo-name">M. Zeitler</span>
-                    <span class="logo-role">developer</span>
+                    <span class="logo-role" data-i18n="common.role">developer</span>
                 </span>
             </a>
 
@@ -110,8 +113,8 @@
                 </div>
             </div>
 
-            <button class="burger-btn" type="button" aria-label="Menü öffnen" aria-controls="mobileHeroMenu"
-                aria-expanded="false">
+            <button class="burger-btn" type="button" aria-label="Open menu" data-i18n-aria-label="aria.openMenu"
+                aria-controls="mobileHeroMenu" aria-expanded="false">
                 <img src="./assets/icons/burger-menu-default.svg" alt="" class="burger-icon">
             </button>
         </nav>
@@ -138,13 +141,13 @@
                         my skills as a frontend developer.
                     </p>
 
-                    <a href="#contact" class="btn btn--outline">Let's talk</a>
+                    <a href="#contact" class="btn btn--outline" data-i18n="common.letsTalk">Let's talk</a>
                 </div>
             </div>
         </section>
 
         <section id="skills" class="section skills u-content-limit" aria-labelledby="skillsHeading">
-            <h2 id="skillsHeading" class="section-title">My Skills</h2>
+            <h2 id="skillsHeading" class="section-title" data-i18n="skills.title">My Skills</h2>
 
             <div class="section-content skills-content">
                 <div class="skills-list">
@@ -178,7 +181,7 @@
                 </div>
 
                 <div class="skills-learning">
-                    <h3>I am currently learning</h3>
+                    <h3 data-i18n="skills.learningTitle">I am currently learning</h3>
 
                     <div class="learning-icons">
                         <div class="learning-item">
@@ -190,7 +193,7 @@
                         </div>
                     </div>
 
-                    <p>
+                    <p data-i18n="skills.learningDescription">
                         I am motivated to continuously improve my skills,
                         implement innovative solutions and stay up to date
                         with new technologies.
@@ -198,16 +201,19 @@
                 </div>
             </div>
 
-            <a href="#contact" class="btn skills-contact-btn">Let's talk</a>
+            <a href="#contact" class="btn skills-contact-btn" data-i18n="common.letsTalk">Let's talk</a>
         </section>
 
         <section id="projects" class="section projects u-content-limit" aria-labelledby="projectsHeading">
-            <h2 id="projectsHeading" class="section-title">My Projects</h2>
+            <h2 id="projectsHeading" class="section-title" data-i18n="projects.title">My Projects</h2>
 
-            <nav class="projects-tabs" aria-label="Projektauswahl">
-                <button type="button" class="project-tab active" data-project="pokedex">1. Pokedex</button>
-                <button type="button" class="project-tab" data-project="join">2. Join</button>
-                <button type="button" class="project-tab" data-project="el-pollo-loco">3. El Pollo Loco</button>
+            <nav class="projects-tabs" aria-label="Project selection" data-i18n-aria-label="projects.selection">
+                <button type="button" class="project-tab active" data-project="pokedex"
+                    data-i18n="projects.tabs.pokedex">1. Pokedex</button>
+                <button type="button" class="project-tab" data-project="join" data-i18n="projects.tabs.join">2.
+                    Join</button>
+                <button type="button" class="project-tab" data-project="el-pollo-loco"
+                    data-i18n="projects.tabs.elPolloLoco">3. El Pollo Loco</button>
             </nav>
 
             <div class="projects-content">
@@ -215,29 +221,29 @@
                     <div class="project-info">
                         <div class="project-text-block">
                             <div class="project-headline-row">
-                                <h3>About the project</h3>
-                                <span>Duration: 3 weeks</span>
+                                <h3 data-i18n="projects.common.about">About the project</h3>
+                                <span data-i18n="projects.pokedex.duration">Duration: 3 weeks</span>
                             </div>
 
-                            <p>
+                            <p data-i18n="projects.pokedex.description">
                                 A simple web application that uses the PokéAPI to display Pokémon data.
                                 Users can search for Pokémon and view relevant details in a clean interface.
                             </p>
                         </div>
 
                         <div class="project-text-block">
-                            <h3>How I have organised my work process</h3>
+                            <h3 data-i18n="projects.common.workProcess">How I have organised my work process</h3>
 
-                            <p>
+                            <p data-i18n="projects.pokedex.workProcess">
                                 The project was structured with reusable functions, separated logic and
                                 clear file organisation for HTML, CSS and JavaScript.
                             </p>
                         </div>
 
                         <div class="project-text-block">
-                            <h3>What I have learnt</h3>
+                            <h3 data-i18n="projects.common.learned">What I have learnt</h3>
 
-                            <p>
+                            <p data-i18n="projects.pokedex.learned">
                                 This project helped me practise planning, documenting and improving code
                                 step by step.
                             </p>
@@ -246,7 +252,7 @@
 
                     <div class="project-preview">
                         <div class="project-technologies">
-                            <span>Technologies</span>
+                            <span data-i18n="projects.common.technologies">Technologies</span>
 
                             <div class="project-tech-icons">
                                 <img src="./assets/icons/skills-HTML.svg" alt="HTML" class="project-tech-icon">
@@ -258,43 +264,46 @@
                         </div>
 
                         <div class="project-image-wrapper">
-                            <img src="./assets/img/projects/pokedex.png" alt="Screenshot des Pokedex Projekts"
+                            <img src="./assets/img/projects/pokedex.png" alt="Screenshot of the Pokedex project"
                                 class="project-image">
                         </div>
 
                         <div class="project-actions">
-                            <a href="#" class="btn project-btn project-btn--primary">Live Test</a>
-                            <a href="#" class="btn project-btn project-btn--outline">GitHub</a>
+                            <a href="#" class="btn project-btn project-btn--primary"
+                                data-i18n="projects.common.liveTest">Live Test</a>
+                            <a href="#" class="btn project-btn project-btn--outline"
+                                data-i18n="projects.common.github">GitHub</a>
                         </div>
                     </div>
                 </article>
+
                 <article class="project-panel" data-project="join">
                     <div class="project-info">
                         <div class="project-text-block">
                             <div class="project-headline-row">
-                                <h3>About the project</h3>
-                                <span>Duration: 5 weeks</span>
+                                <h3 data-i18n="projects.common.about">About the project</h3>
+                                <span data-i18n="projects.join.duration">Duration: 5 weeks</span>
                             </div>
 
-                            <p>
+                            <p data-i18n="projects.join.description">
                                 Join is a task management application inspired by the Kanban system.
                                 Users can create tasks, assign contacts and organize work across different boards.
                             </p>
                         </div>
 
                         <div class="project-text-block">
-                            <h3>How I have organised my work process</h3>
+                            <h3 data-i18n="projects.common.workProcess">How I have organised my work process</h3>
 
-                            <p>
+                            <p data-i18n="projects.join.workProcess">
                                 The project was structured into reusable components, clear JavaScript functions
                                 and separate areas for board logic, contacts and task handling.
                             </p>
                         </div>
 
                         <div class="project-text-block">
-                            <h3>My group work experience</h3>
+                            <h3 data-i18n="projects.join.groupWorkTitle">My group work experience</h3>
 
-                            <p>
+                            <p data-i18n="projects.join.groupWork">
                                 Working on Join helped me practise collaboration, task distribution,
                                 communication and merging different parts of the project.
                             </p>
@@ -303,7 +312,7 @@
 
                     <div class="project-preview">
                         <div class="project-technologies">
-                            <span>Technologies</span>
+                            <span data-i18n="projects.common.technologies">Technologies</span>
 
                             <div class="project-tech-icons">
                                 <img src="./assets/icons/skills-HTML.svg" alt="HTML" class="project-tech-icon">
@@ -315,43 +324,46 @@
                         </div>
 
                         <div class="project-image-wrapper">
-                            <img src="./assets/img/projects/join.png" alt="Screenshot des Join Projekts"
+                            <img src="./assets/img/projects/join.png" alt="Screenshot of the Join project"
                                 class="project-image">
                         </div>
 
                         <div class="project-actions">
-                            <a href="#" class="btn project-btn project-btn--primary">Live Test</a>
-                            <a href="#" class="btn project-btn project-btn--outline">GitHub</a>
+                            <a href="#" class="btn project-btn project-btn--primary"
+                                data-i18n="projects.common.liveTest">Live Test</a>
+                            <a href="#" class="btn project-btn project-btn--outline"
+                                data-i18n="projects.common.github">GitHub</a>
                         </div>
                     </div>
                 </article>
+
                 <article class="project-panel" data-project="el-pollo-loco">
                     <div class="project-info">
                         <div class="project-text-block">
                             <div class="project-headline-row">
-                                <h3>About the project</h3>
-                                <span>Duration: 4 weeks</span>
+                                <h3 data-i18n="projects.common.about">About the project</h3>
+                                <span data-i18n="projects.elPolloLoco.duration">Duration: 4 weeks</span>
                             </div>
 
-                            <p>
+                            <p data-i18n="projects.elPolloLoco.description">
                                 El Pollo Loco is a 2D jump-and-run game built with object-oriented JavaScript.
                                 The player collects items, avoids enemies and fights the final boss.
                             </p>
                         </div>
 
                         <div class="project-text-block">
-                            <h3>How I have organised my work process</h3>
+                            <h3 data-i18n="projects.common.workProcess">How I have organised my work process</h3>
 
-                            <p>
+                            <p data-i18n="projects.elPolloLoco.workProcess">
                                 The game logic was structured into separate classes for the character,
                                 enemies, objects, the world and collision handling.
                             </p>
                         </div>
 
                         <div class="project-text-block">
-                            <h3>What I have learnt</h3>
+                            <h3 data-i18n="projects.common.learned">What I have learnt</h3>
 
-                            <p>
+                            <p data-i18n="projects.elPolloLoco.learned">
                                 This project helped me improve my understanding of object-oriented programming,
                                 animations, game loops and interactive browser-based applications.
                             </p>
@@ -360,7 +372,7 @@
 
                     <div class="project-preview">
                         <div class="project-technologies">
-                            <span>Technologies</span>
+                            <span data-i18n="projects.common.technologies">Technologies</span>
 
                             <div class="project-tech-icons">
                                 <img src="./assets/icons/skills-HTML.svg" alt="HTML" class="project-tech-icon">
@@ -372,12 +384,14 @@
 
                         <div class="project-image-wrapper">
                             <img src="./assets/img/projects/el-pollo-loco.png"
-                                alt="Screenshot des El Pollo Loco Projekts" class="project-image">
+                                alt="Screenshot of the El Pollo Loco project" class="project-image">
                         </div>
 
                         <div class="project-actions">
-                            <a href="#" class="btn project-btn project-btn--primary">Live Test</a>
-                            <a href="#" class="btn project-btn project-btn--outline">GitHub</a>
+                            <a href="#" class="btn project-btn project-btn--primary"
+                                data-i18n="projects.common.liveTest">Live Test</a>
+                            <a href="#" class="btn project-btn project-btn--outline"
+                                data-i18n="projects.common.github">GitHub</a>
                         </div>
                     </div>
                 </article>
@@ -386,76 +400,84 @@
 
         <section id="contact" class="section contact u-content-limit" aria-labelledby="contactHeading">
             <div class="contact-header">
-                <h2 id="contactHeading" class="section-title">Contact me</h2>
+                <h2 id="contactHeading" class="section-title" data-i18n="contact.title">Contact me</h2>
 
-                <a href="#hero" class="contact-scroll-top" aria-label="Zurück nach oben"></a>
+                <a href="#hero" class="contact-scroll-top" aria-label="Back to top"
+                    data-i18n-aria-label="contact.backToTop"></a>
             </div>
 
             <div class="contact-intro">
-                <p>
+                <p data-i18n="contact.intro">
                     I am interested in frontend development opportunities where I can create clean,
                     responsive and user-friendly web interfaces. If you are looking for a motivated
                     developer who enjoys solving problems and continuously improving, feel free to contact me.
                 </p>
 
                 <div class="contact-details">
-                    <a href="mailto:m.zeitler1987@outlook.de" class="contact-link contact-link--email">
+                    <a href="mailto:m.zeitler1987@outlook.de" class="contact-link contact-link--email"
+                        data-i18n="contact.email">
                         E-mail: m.zeitler1987@outlook.de
                     </a>
 
-                    <a href="tel:+4915174475476" class="contact-link contact-link--phone">
+                    <a href="tel:+4915174475476" class="contact-link contact-link--phone" data-i18n="contact.phone">
                         Tel: 0151 744 754 76
                     </a>
                 </div>
             </div>
 
-            <h3 class="contact-form-headline">Let us work together!</h3>
+            <h3 class="contact-form-headline" data-i18n="contact.form.headline">Let us work together!</h3>
 
             <form id="contactForm" class="contact-form" novalidate autocomplete="off">
                 <div class="contact-form-row">
                     <div class="form-group">
-                        <label for="contactName">Your name</label>
+                        <label for="contactName" data-i18n="contact.form.nameLabel">Your name</label>
                         <input type="text" id="contactName" name="name" required autocomplete="off" placeholder=" ">
-                        <p class="form-error">Your name is required</p>
+                        <p class="form-error" data-i18n="contact.form.nameRequired">Your name is required</p>
                     </div>
 
                     <div class="form-group">
-                        <label for="contactEmail">Your Email</label>
+                        <label for="contactEmail" data-i18n="contact.form.emailLabel">Your Email</label>
                         <input type="email" id="contactEmail" name="email" required autocomplete="off" placeholder=" "
                             pattern="^[^\s@]+@[^\s@]+\.[A-Za-z]{2,}$">
                         <p class="form-error" data-required-message="Your Email is required"
-                            data-invalid-message="Please enter a valid email address.">
+                            data-invalid-message="Please enter a valid email address."
+                            data-i18n="contact.form.emailRequired"
+                            data-i18n-required-message="contact.form.emailRequired"
+                            data-i18n-invalid-message="contact.form.emailInvalid">
                             Your Email is required
                         </p>
                     </div>
                 </div>
 
                 <div class="form-group">
-                    <label for="contactMessage">Your Message</label>
+                    <label for="contactMessage" data-i18n="contact.form.messageLabel">Your Message</label>
                     <textarea id="contactMessage" name="message" required autocomplete="off" placeholder=" "></textarea>
-                    <p class="form-error">Your Message is required</p>
+                    <p class="form-error" data-i18n="contact.form.messageRequired">Your Message is required</p>
                 </div>
 
                 <div class="contact-form-footer">
                     <div class="privacy-field">
                         <label class="privacy-check">
                             <input type="checkbox" name="privacy" required>
-                            <span>
+                            <span data-i18n-html="contact.form.privacyText">
                                 I've read the
                                 <a href="./legal-notice.html#privacy-policy" class="privacy-link">privacy policy</a>
                                 and agree to the processing of my data as outlined.
                             </span>
                         </label>
 
-                        <p class="privacy-error">Please accept the privacy policy.</p>
+                        <p class="privacy-error" data-i18n="contact.form.privacyRequired">
+                            Please accept the privacy policy.
+                        </p>
                     </div>
 
-                    <button type="submit" class="btn contact-submit-btn" disabled>
+                    <button type="submit" class="btn contact-submit-btn" disabled data-i18n="contact.form.send">
                         Send
                     </button>
                 </div>
 
-                <p id="contactSuccessMessage" class="contact-success-message" role="status" aria-live="polite">
+                <p id="contactSuccessMessage" class="contact-success-message" role="status" aria-live="polite"
+                    data-i18n="contact.form.success">
                     Your message has been sent successfully.
                 </p>
             </form>
@@ -465,26 +487,27 @@
     <footer class="footer">
         <div class="footer-content u-content-limit">
             <div class="footer-legal">
-                <a href="./legal-notice.html" class="footer-link">Legal notice</a>
+                <a href="./legal-notice.html" class="footer-link" data-i18n="footer.legalNotice">Legal notice</a>
                 <p>© Michael Zeitler 2026</p>
             </div>
 
-            <a href="#hero" class="footer-logo logo" aria-label="Zur Startseite">
+            <a href="#hero" class="footer-logo logo" aria-label="Go to homepage" data-i18n-aria-label="aria.home">
                 <img src="./assets/icons/logo-dark-mob.svg" alt="" class="logo-icon">
 
                 <span class="logo-text">
                     <span class="logo-name">M. Zeitler</span>
-                    <span class="logo-role">developer</span>
+                    <span class="logo-role" data-i18n="common.role">developer</span>
                 </span>
             </a>
 
             <div class="footer-socials">
                 <a href="#" class="social-link footer-social-link footer-social-link--github"
-                    aria-label="GitHub Profil öffnen"></a>
+                    aria-label="Open GitHub profile" data-i18n-aria-label="aria.github"></a>
                 <a href="mailto:m.zeitler1987@outlook.de"
-                    class="social-link footer-social-link footer-social-link--mail" aria-label="E-Mail schreiben"></a>
+                    class="social-link footer-social-link footer-social-link--mail" aria-label="Write an email"
+                    data-i18n-aria-label="aria.email"></a>
                 <a href="#" class="social-link footer-social-link footer-social-link--linkedin"
-                    aria-label="LinkedIn Profil öffnen"></a>
+                    aria-label="Open LinkedIn profile" data-i18n-aria-label="aria.linkedin"></a>
             </div>
         </div>
     </footer>

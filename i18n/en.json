@@ -1,4 +1,16 @@
 {
+    "common": {
+        "role": "developer",
+        "letsTalk": "Let's talk"
+    },
+    "aria": {
+        "home": "Go to homepage",
+        "email": "Write an email",
+        "github": "Open GitHub profile",
+        "linkedin": "Open LinkedIn profile",
+        "openMenu": "Open menu",
+        "mobileNavigation": "Mobile navigation"
+    },
     "nav": {
         "about": "About me",
         "skills": "Skills",
@@ -11,6 +23,76 @@
     },
     "about": {
         "title": "Who am I?",
-        "description": "Creating “something” out of nothing — that’s what excites me about programming. I enjoy solving problems, building clean interfaces and continuously improving my skills as a frontend developer."
+        "description": "Creating “something” out of nothing — that’s what excites me about programming. I enjoy solving problems, building clean interfaces and continuously improving my skills as a frontend developer.",
+        "locationWeb": "I am based in Frankfurt.",
+        "locationRemote": "I am open to remote work."
+    },
+    "skills": {
+        "title": "My Skills",
+        "learningTitle": "I am currently learning",
+        "learningDescription": "I am motivated to continuously improve my skills, implement innovative solutions and stay up to date with new technologies."
+    },
+    "projects": {
+        "title": "My Projects",
+        "selection": "Project selection",
+        "tabs": {
+            "pokedex": "1. Pokedex",
+            "join": "2. Join",
+            "elPolloLoco": "3. El Pollo Loco"
+        },
+        "common": {
+            "about": "About the project",
+            "workProcess": "How I have organised my work process",
+            "learned": "What I have learnt",
+            "technologies": "Technologies",
+            "liveTest": "Live Test",
+            "github": "GitHub"
+        },
+        "pokedex": {
+            "duration": "Duration: 3 weeks",
+            "description": "A simple web application that uses the PokéAPI to display Pokémon data. Users can search for Pokémon and view relevant details in a clean interface.",
+            "workProcess": "The project was structured with reusable functions, separated logic and clear file organisation for HTML, CSS and JavaScript.",
+            "learned": "This project helped me practise planning, documenting and improving code step by step."
+        },
+        "join": {
+            "duration": "Duration: 5 weeks",
+            "description": "Join is a task management application inspired by the Kanban system. Users can create tasks, assign contacts and organize work across different boards.",
+            "workProcess": "The project was structured into reusable components, clear JavaScript functions and separate areas for board logic, contacts and task handling.",
+            "groupWorkTitle": "My group work experience",
+            "groupWork": "Working on Join helped me practise collaboration, task distribution, communication and merging different parts of the project."
+        },
+        "elPolloLoco": {
+            "duration": "Duration: 4 weeks",
+            "description": "El Pollo Loco is a 2D jump-and-run game built with object-oriented JavaScript. The player collects items, avoids enemies and fights the final boss.",
+            "workProcess": "The game logic was structured into separate classes for the character, enemies, objects, the world and collision handling.",
+            "learned": "This project helped me improve my understanding of object-oriented programming, animations, game loops and interactive browser-based applications."
+        }
+    },
+    "contact": {
+        "title": "Contact me",
+        "backToTop": "Back to top",
+        "intro": "I am interested in frontend development opportunities where I can create clean, responsive and user-friendly web interfaces. If you are looking for a motivated developer who enjoys solving problems and continuously improving, feel free to contact me.",
+        "email": "E-mail: m.zeitler1987@outlook.de",
+        "phone": "Tel: 0151 744 754 76",
+        "form": {
+            "headline": "Let us work together!",
+            "nameLabel": "Your name",
+            "nameRequired": "Your name is required",
+            "emailLabel": "Your Email",
+            "emailRequired": "Your Email is required",
+            "emailInvalid": "Please enter a valid email address.",
+            "messageLabel": "Your Message",
+            "messageRequired": "Your Message is required",
+            "privacyStart": "I've read the",
+            "privacyLink": "privacy policy",
+            "privacyEnd": "and agree to the processing of my data as outlined.",
+            "privacyRequired": "Please accept the privacy policy.",
+            "privacyText": "I've read the <a href=\"./legal-notice.html#privacy-policy\" class=\"privacy-link\">privacy policy</a> and agree to the processing of my data as outlined.",
+            "send": "Send",
+            "success": "Your message has been sent successfully."
+        }
+    },
+    "footer": {
+        "legalNotice": "Legal notice"
     }
 }

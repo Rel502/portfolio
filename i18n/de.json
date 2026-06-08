@@ -1,4 +1,16 @@
 {
+    "common": {
+        "role": "Entwickler",
+        "letsTalk": "Lass uns sprechen"
+    },
+    "aria": {
+        "home": "Zur Startseite",
+        "email": "E-Mail schreiben",
+        "github": "GitHub Profil öffnen",
+        "linkedin": "LinkedIn Profil öffnen",
+        "openMenu": "Menü öffnen",
+        "mobileNavigation": "Mobile Navigation"
+    },
     "nav": {
         "about": "Über mich",
         "skills": "Fähigkeiten",
@@ -11,6 +23,76 @@
     },
     "about": {
         "title": "Wer bin ich?",
-        "description": "Aus dem Nichts „etwas“ zu erschaffen — genau das fasziniert mich am Programmieren. Ich löse gerne Probleme, entwickle saubere Benutzeroberflächen und verbessere kontinuierlich meine Fähigkeiten als Frontend-Entwickler."
+        "description": "Aus dem Nichts „etwas“ zu erschaffen — genau das fasziniert mich am Programmieren. Ich löse gerne Probleme, entwickle saubere Benutzeroberflächen und verbessere kontinuierlich meine Fähigkeiten als Frontend-Entwickler.",
+        "locationWeb": "Ich bin in Frankfurt ansässig.",
+        "locationRemote": "Ich bin offen für Remote-Arbeit."
+    },
+    "skills": {
+        "title": "Meine Fähigkeiten",
+        "learningTitle": "Ich lerne aktuell",
+        "learningDescription": "Ich bin motiviert, meine Fähigkeiten kontinuierlich zu verbessern, innovative Lösungen umzusetzen und mit neuen Technologien auf dem aktuellen Stand zu bleiben."
+    },
+    "projects": {
+        "title": "Meine Projekte",
+        "selection": "Projektauswahl",
+        "tabs": {
+            "pokedex": "1. Pokedex",
+            "join": "2. Join",
+            "elPolloLoco": "3. El Pollo Loco"
+        },
+        "common": {
+            "about": "Über das Projekt",
+            "workProcess": "Wie ich meinen Arbeitsprozess organisiert habe",
+            "learned": "Was ich gelernt habe",
+            "technologies": "Technologien",
+            "liveTest": "Live Test",
+            "github": "GitHub"
+        },
+        "pokedex": {
+            "duration": "Dauer: 3 Wochen",
+            "description": "Eine einfache Webanwendung, die die PokéAPI nutzt, um Pokémon-Daten anzuzeigen. Nutzer können nach Pokémon suchen und relevante Details in einer übersichtlichen Oberfläche ansehen.",
+            "workProcess": "Das Projekt wurde mit wiederverwendbaren Funktionen, getrennter Logik und einer klaren Dateistruktur für HTML, CSS und JavaScript aufgebaut.",
+            "learned": "Dieses Projekt hat mir geholfen, Planung, Dokumentation und schrittweise Verbesserung von Code zu üben."
+        },
+        "join": {
+            "duration": "Dauer: 5 Wochen",
+            "description": "Join ist eine Task-Management-Anwendung, die vom Kanban-System inspiriert ist. Nutzer können Aufgaben erstellen, Kontakte zuweisen und Arbeit über verschiedene Boards organisieren.",
+            "workProcess": "Das Projekt wurde in wiederverwendbare Komponenten, klare JavaScript-Funktionen und getrennte Bereiche für Board-Logik, Kontakte und Aufgabenverwaltung strukturiert.",
+            "groupWorkTitle": "Meine Erfahrung in der Gruppenarbeit",
+            "groupWork": "Die Arbeit an Join hat mir geholfen, Zusammenarbeit, Aufgabenverteilung, Kommunikation und das Zusammenführen verschiedener Projektteile zu üben."
+        },
+        "elPolloLoco": {
+            "duration": "Dauer: 4 Wochen",
+            "description": "El Pollo Loco ist ein 2D-Jump-and-Run-Spiel, das mit objektorientiertem JavaScript umgesetzt wurde. Der Spieler sammelt Gegenstände, weicht Gegnern aus und kämpft gegen den Endboss.",
+            "workProcess": "Die Spiellogik wurde in separate Klassen für den Charakter, Gegner, Objekte, die Welt und die Kollisionsprüfung aufgeteilt.",
+            "learned": "Dieses Projekt hat mir geholfen, mein Verständnis für objektorientierte Programmierung, Animationen, Game Loops und interaktive browserbasierte Anwendungen zu verbessern."
+        }
+    },
+    "contact": {
+        "title": "Kontakt",
+        "backToTop": "Zurück nach oben",
+        "intro": "Ich interessiere mich für Möglichkeiten im Frontend Development, bei denen ich saubere, responsive und benutzerfreundliche Weboberflächen entwickeln kann. Wenn Sie einen motivierten Entwickler suchen, der gerne Probleme löst und sich kontinuierlich verbessert, können Sie mich gerne kontaktieren.",
+        "email": "E-Mail: m.zeitler1987@outlook.de",
+        "phone": "Tel: 0151 744 754 76",
+        "form": {
+            "headline": "Lass uns zusammenarbeiten!",
+            "nameLabel": "Dein Name",
+            "nameRequired": "Dein Name ist erforderlich",
+            "emailLabel": "Deine E-Mail",
+            "emailRequired": "Deine E-Mail ist erforderlich",
+            "emailInvalid": "Bitte gib eine gültige E-Mail-Adresse ein.",
+            "messageLabel": "Deine Nachricht",
+            "messageRequired": "Deine Nachricht ist erforderlich",
+            "privacyStart": "Ich habe die",
+            "privacyLink": "Datenschutzerklärung",
+            "privacyEnd": "gelesen und stimme der Verarbeitung meiner Daten wie beschrieben zu.",
+            "privacyRequired": "Bitte akzeptiere die Datenschutzerklärung.",
+            "privacyText": "Ich habe die <a href=\"./legal-notice.html#privacy-policy\" class=\"privacy-link\">Datenschutzerklärung</a> gelesen und stimme der Verarbeitung meiner Daten wie beschrieben zu.",
+            "send": "Senden",
+            "success": "Deine Nachricht wurde erfolgreich gesendet."
+        }
+    },
+    "footer": {
+        "legalNotice": "Impressum"
     }
 }
