@@ -1,0 +1,16 @@
+{
+    "nav": {
+        "about": "About me",
+        "skills": "Skills",
+        "projects": "Projects",
+        "contact": "Contact"
+    },
+    "hero": {
+        "subtitle": "Frontend Developer",
+        "scrollDown": "Scroll to next section"
+    },
+    "about": {
+        "title": "Who am I?",
+        "description": "Creating “something” out of nothing — that’s what excites me about programming. I enjoy solving problems, building clean interfaces and continuously improving my skills as a frontend developer."
+    }
+}

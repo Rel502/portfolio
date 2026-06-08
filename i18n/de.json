@@ -1,0 +1,16 @@
+{
+    "nav": {
+        "about": "Über mich",
+        "skills": "Fähigkeiten",
+        "projects": "Projekte",
+        "contact": "Kontakt"
+    },
+    "hero": {
+        "subtitle": "Frontend Entwickler",
+        "scrollDown": "Zur nächsten Section scrollen"
+    },
+    "about": {
+        "title": "Wer bin ich?",
+        "description": "Aus dem Nichts „etwas“ zu erschaffen — genau das fasziniert mich am Programmieren. Ich löse gerne Probleme, entwickle saubere Benutzeroberflächen und verbessere kontinuierlich meine Fähigkeiten als Frontend-Entwickler."
+    }
+}

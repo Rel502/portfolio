@@ -19,11 +19,14 @@ document.addEventListener('DOMContentLoaded', init);
 
 function init() {
     setupActiveElements('.nav-list a');
-    setupActiveElements('.language-btn');
     setupScrollDownButton();
     setupAboutLocationAnimation();
     setupProjectTabs();
     setupMobileMenu();
+
+    if (typeof setupLanguageSwitch === 'function') {
+        setupLanguageSwitch();
+    }
 
     if (typeof setupContactForm === 'function') {
         setupContactForm();

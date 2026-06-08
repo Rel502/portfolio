@@ -22,6 +22,7 @@
     <link rel="stylesheet" href="./css/footer.css">
     <script src="./js/contactform.js" defer></script>
     <script src="./js/mobile-menu.js" defer></script>
+    <script src="./js/language.js" defer></script>
     <script src="./js/main.js" defer></script>
 </head>
 
@@ -34,15 +35,15 @@
 
                     <nav class="mobile-hero-menu" id="mobileHeroMenu" aria-label="Mobile Navigation">
                         <ul class="mobile-hero-menu-list">
-                            <li><a href="#about">About me</a></li>
-                            <li><a href="#skills">Skills</a></li>
-                            <li><a href="#projects">Projects</a></li>
-                            <li><a href="#contact">Contact</a></li>
+                            <li><a href="#about" data-i18n="nav.about">About me</a></li>
+                            <li><a href="#skills" data-i18n="nav.skills">Skills</a></li>
+                            <li><a href="#projects" data-i18n="nav.projects">Projects</a></li>
+                            <li><a href="#contact" data-i18n="nav.contact">Contact</a></li>
                         </ul>
 
                         <div class="mobile-hero-language-switch">
-                            <button type="button" class="language-btn">DE</button>
-                            <button type="button" class="language-btn active">EN</button>
+                            <button type="button" class="language-btn" data-lang="de">DE</button>
+                            <button type="button" class="language-btn active" data-lang="en">EN</button>
                         </div>
                     </nav>
                 </div>
@@ -73,10 +74,11 @@
 
                 <div class="hero-intro">
                     <h1>Michael Zeitler</h1>
-                    <p>Frontend Developer</p>
+                    <p data-i18n="hero.subtitle">Frontend Developer</p>
                 </div>
 
-                <a href="#about" class="scroll-down" aria-label="Zur nächsten Section scrollen"></a>
+                <a href="#about" class="scroll-down" aria-label="Zur nächsten Section scrollen"
+                    data-i18n-aria-label="hero.scrollDown"></a>
             </div>
         </section>
     </div>
@@ -95,15 +97,15 @@
             <div class="navbar-menu" id="navbarMenu">
                 <div class="mobile-menu-content">
                     <ul class="nav-list">
-                        <li><a href="#about">About me</a></li>
-                        <li><a href="#skills">Skills</a></li>
-                        <li><a href="#projects">Projects</a></li>
-                        <li><a href="#contact">Contact</a></li>
+                        <li><a href="#about" data-i18n="nav.about">About me</a></li>
+                        <li><a href="#skills" data-i18n="nav.skills">Skills</a></li>
+                        <li><a href="#projects" data-i18n="nav.projects">Projects</a></li>
+                        <li><a href="#contact" data-i18n="nav.contact">Contact</a></li>
                     </ul>
 
                     <div class="language-switch">
-                        <button type="button" class="language-btn">DE</button>
-                        <button type="button" class="language-btn active">EN</button>
+                        <button type="button" class="language-btn" data-lang="de">DE</button>
+                        <button type="button" class="language-btn active" data-lang="en">EN</button>
                     </div>
                 </div>
             </div>
@@ -117,7 +119,7 @@
 
     <main>
         <section id="about" class="section about u-content-limit">
-            <h2 class="section-title">Who am I?</h2>
+            <h2 class="section-title" data-i18n="about.title">Who am I?</h2>
 
             <div class="section-content about-content">
                 <div class="about-location">
@@ -130,7 +132,7 @@
                 </div>
 
                 <div class="about-text">
-                    <p>
+                    <p data-i18n="about.description">
                         Creating “something” out of nothing — that’s what excites me about programming.
                         I enjoy solving problems, building clean interfaces and continuously improving
                         my skills as a frontend developer.
