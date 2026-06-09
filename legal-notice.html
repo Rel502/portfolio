@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="de">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Legal Notice</title>
+    <title data-i18n="legal.pageTitle">Legal Notice</title>
     <link rel="icon" href="./assets/icons/logo-dark-mob.svg" type="image/icon type">
     <link rel="stylesheet" href="./css/fonts.css">
     <link rel="stylesheet" href="./css/variables.css">
@@ -14,33 +14,34 @@
     <link rel="stylesheet" href="./css/header.css">
     <link rel="stylesheet" href="./css/legal.css">
     <link rel="stylesheet" href="./css/footer.css">
+    <script src="./js/language.js" defer></script>
     <script src="./js/main.js" defer></script>
 </head>
 
 <body>
     <header class="header">
         <nav class="navbar">
-            <a href="./index.html#hero" class="logo" aria-label="Zur Startseite">
+            <a href="./index.html#hero" class="logo" aria-label="Zur Startseite" data-i18n-aria-label="aria.home">
                 <img src="./assets/icons/logo-dark-mob.svg" alt="" class="logo-icon">
 
                 <span class="logo-text">
                     <span class="logo-name">M. Zeitler</span>
-                    <span class="logo-role">developer</span>
+                    <span class="logo-role" data-i18n="common.role">developer</span>
                 </span>
             </a>
 
             <div class="navbar-menu" id="navbarMenu">
                 <div class="mobile-menu-content">
                     <ul class="nav-list">
-                        <li><a href="./index.html#about">About me</a></li>
-                        <li><a href="./index.html#skills">Skills</a></li>
-                        <li><a href="./index.html#projects">Projects</a></li>
-                        <li><a href="./index.html#contact">Contact</a></li>
+                        <li><a href="./index.html#about" data-i18n="nav.about">About me</a></li>
+                        <li><a href="./index.html#skills" data-i18n="nav.skills">Skills</a></li>
+                        <li><a href="./index.html#projects" data-i18n="nav.projects">Projects</a></li>
+                        <li><a href="./index.html#contact" data-i18n="nav.contact">Contact</a></li>
                     </ul>
 
                     <div class="language-switch">
-                        <button type="button" class="language-btn">DE</button>
-                        <button type="button" class="language-btn active">EN</button>
+                        <button type="button" class="language-btn" data-lang="de">DE</button>
+                        <button type="button" class="language-btn active" data-lang="en">EN</button>
                     </div>
                 </div>
             </div>
@@ -57,14 +58,16 @@
     <main class="legal-page">
         <section class="legal-content u-content-limit">
 
-            <a href="./index.html#contact" class="legal-back-link" aria-label="Zurück zur Kontaktsektion"></a>
+            <a href="./index.html#contact" class="legal-back-link" aria-label="Zurück zur Kontaktsektion"
+                data-i18n-aria-label="legal.backToContact"></a>
 
-            <h1>Legal Notice</h1>
+            <h1 data-i18n="legal.pageTitle">Legal Notice</h1>
 
             <section id="imprint" class="legal-section">
-                <h2>Imprint</h2>
+                <h2 data-i18n="legal.imprintTitle">Imprint</h2>
 
-                <h3>Information pursuant to Section 5 of the German Data Protection Act (DDG)</h3>
+                <h3 data-i18n="legal.imprintInfo">Information pursuant to Section 5 of the German Data Protection Act
+                    (DDG)</h3>
 
                 <p>
                     Michael Zeitler<br>
@@ -73,14 +76,14 @@
                     Deutschland
                 </p>
 
-                <h2>Contact</h2>
+                <h2 data-i18n="legal.contactTitle">Contact</h2>
 
                 <p>
                     E-Mail: <a href="mailto:m.zeitler1987@outlook.de">m.zeitler1987@outlook.de</a><br>
                     Telefon: <a href="tel:+4915174475476">0151 744 754 76</a>
                 </p>
 
-                <h2>Responsible for the content</h2>
+                <h2 data-i18n="legal.responsibleTitle">Responsible for the content</h2>
 
                 <p>
                     Michael Zeitler<br>
@@ -90,9 +93,9 @@
             </section>
 
             <section class="legal-section">
-                <h2>Acceptance of terms</h2>
+                <h2 data-i18n="legal.acceptanceTitle">Acceptance of terms</h2>
 
-                <p>
+                <p data-i18n="legal.acceptanceText">
                     By accessing and using Portfolio (Product), you acknowledge and agree to the following terms and
                     conditions,
                     and any policies, guidelines, or amendments thereto that may be presented to you from time to time.
@@ -102,9 +105,9 @@
             </section>
 
             <section class="legal-section">
-                <h2>Scope and ownership of the product</h2>
+                <h2 data-i18n="legal.scopeTitle">Scope and ownership of the product</h2>
 
-                <p>
+                <p data-i18n="legal.scopeTextOne">
                     Portfolio has been developed as part of a student group project in a web development bootcamp at the
                     Developer Akademie GmbH. It has an educational purpose and is not intended for extensive personal
                     &amp;
@@ -113,16 +116,16 @@
                     aspect of quality regarding this Product.
                 </p>
 
-                <p>
+                <p data-i18n="legal.scopeTextTwo">
                     The design of Portfolio is owned by the Developer Akademie GmbH. Unauthorized use, reproduction,
                     modification, distribution, or replication of the design is strictly prohibited.
                 </p>
             </section>
 
             <section class="legal-section">
-                <h2>Proprietary rights</h2>
+                <h2 data-i18n="legal.proprietaryTitle">Proprietary rights</h2>
 
-                <p>
+                <p data-i18n="legal.proprietaryText">
                     Aside from the design owned by Developer Akademie GmbH, we, the listed students, retain all
                     proprietary
                     rights in Portfolio, including any associated copyrighted material, trademarks, and other
@@ -132,9 +135,9 @@
             </section>
 
             <section class="legal-section">
-                <h2>Use of the product</h2>
+                <h2 data-i18n="legal.useTitle">Use of the product</h2>
 
-                <p>
+                <p data-i18n="legal.useText">
                     Portfolio is intended to be used for lawful purposes only, in accordance with all applicable laws
                     and
                     regulations. Any use of Portfolio for illegal activities, or to harass, harm, threaten, or
@@ -146,9 +149,9 @@
             </section>
 
             <section class="legal-section">
-                <h2>Disclaimer of warranties and limitation of liability</h2>
+                <h2 data-i18n="legal.disclaimerTitle">Disclaimer of warranties and limitation of liability</h2>
 
-                <p>
+                <p data-i18n="legal.disclaimerText">
                     Portfolio is provided "as is" without warranty of any kind, whether express or implied, including
                     but not
                     limited to the implied warranties of merchantability, fitness for a particular purpose, and
@@ -164,9 +167,9 @@
             </section>
 
             <section class="legal-section">
-                <h2>Indemnity</h2>
+                <h2 data-i18n="legal.indemnityTitle">Indemnity</h2>
 
-                <p>
+                <p data-i18n="legal.indemnityText">
                     You agree to indemnify, defend and hold harmless us, the listed students, the Developer Akademie,
                     and our
                     affiliates, partners, officers, directors, agents, and employees, from and against any claim,
@@ -176,12 +179,12 @@
                     Portfolio and/or your breach of this Legal Notice.
                 </p>
 
-                <p>
+                <p data-i18n-html="legal.contactNotice">
                     For any questions or notices, please contact us at
                     <a href="mailto:m.zeitler1987@outlook.de">m.zeitler1987@outlook.de</a>.
                 </p>
 
-                <p>
+                <p data-i18n="legal.date">
                     Date: July 26, 2025
                 </p>
             </section>
@@ -190,26 +193,28 @@
     <footer class="footer">
         <div class="footer-content u-content-limit">
             <div class="footer-legal">
-                <a href="./legal-notice.html" class="footer-link">Legal notice</a>
+                <a href="./legal-notice.html" class="footer-link" data-i18n="footer.legalNotice">Legal notice</a>
                 <p>© Michael Zeitler 2026</p>
             </div>
 
-            <a href="./index.html#hero" class="footer-logo logo" aria-label="Zur Startseite">
+            <a href="./index.html#hero" class="footer-logo logo" aria-label="Zur Startseite"
+                data-i18n-aria-label="aria.home">
                 <img src="./assets/icons/logo-dark-mob.svg" alt="" class="logo-icon">
 
                 <span class="logo-text">
                     <span class="logo-name">M. Zeitler</span>
-                    <span class="logo-role">developer</span>
+                    <span class="logo-role" data-i18n="common.role">developer</span>
                 </span>
             </a>
 
             <div class="footer-socials">
                 <a href="#" class="social-link footer-social-link footer-social-link--github"
-                    aria-label="GitHub Profil öffnen"></a>
+                    aria-label="GitHub Profil öffnen" data-i18n-aria-label="aria.github"></a>
                 <a href="mailto:m.zeitler1987@outlook.de"
-                    class="social-link footer-social-link footer-social-link--mail" aria-label="E-Mail schreiben"></a>
+                    class="social-link footer-social-link footer-social-link--mail" aria-label="E-Mail schreiben"
+                    data-i18n-aria-label="aria.email"></a>
                 <a href="#" class="social-link footer-social-link footer-social-link--linkedin"
-                    aria-label="LinkedIn Profil öffnen"></a>
+                    aria-label="LinkedIn Profil öffnen" data-i18n-aria-label="aria.linkedin"></a>
             </div>
         </div>
     </footer>

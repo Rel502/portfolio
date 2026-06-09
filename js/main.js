@@ -24,7 +24,10 @@ function init() {
     setupScrollDownButton();
     setupAboutLocationAnimation();
     setupProjectTabs();
-    setupMobileMenu();
+
+    if (typeof setupMobileMenu === 'function') {
+        setupMobileMenu();
+    }
 
     if (typeof setupLanguageSwitch === 'function') {
         setupLanguageSwitch();

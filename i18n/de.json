@@ -94,5 +94,28 @@
     },
     "footer": {
         "legalNotice": "Impressum"
+    },
+    "legal": {
+        "pageTitle": "Impressum",
+        "backToContact": "Zurück zur Kontaktsektion",
+        "imprintTitle": "Impressum",
+        "imprintInfo": "Angaben gemäß § 5 DDG",
+        "contactTitle": "Kontakt",
+        "responsibleTitle": "Verantwortlich für den Inhalt",
+        "acceptanceTitle": "Akzeptanz der Bedingungen",
+        "acceptanceText": "Durch den Zugriff auf und die Nutzung von Portfolio (Produkt) erkennst du die folgenden Bedingungen sowie alle Richtlinien, Hinweise oder Änderungen an, die dir von Zeit zu Zeit bereitgestellt werden können. Wir, die aufgeführten Studierenden, können diese Bedingungen von Zeit zu Zeit ohne vorherige Ankündigung aktualisieren oder ändern.",
+        "scopeTitle": "Umfang und Eigentum des Produkts",
+        "scopeTextOne": "Portfolio wurde im Rahmen eines studentischen Gruppenprojekts in einem Webentwicklungs-Bootcamp der Developer Akademie GmbH entwickelt. Es dient Bildungszwecken und ist nicht für eine umfangreiche private oder geschäftliche Nutzung vorgesehen. Daher können wir keine durchgängige Verfügbarkeit, Zuverlässigkeit, Genauigkeit oder sonstige Qualitätsmerkmale dieses Produkts garantieren.",
+        "scopeTextTwo": "Das Design von Portfolio ist Eigentum der Developer Akademie GmbH. Eine unbefugte Nutzung, Vervielfältigung, Änderung, Verbreitung oder Nachbildung des Designs ist ausdrücklich untersagt.",
+        "proprietaryTitle": "Eigentums- und Schutzrechte",
+        "proprietaryText": "Abgesehen von dem Design, das Eigentum der Developer Akademie GmbH ist, behalten wir, die aufgeführten Studierenden, alle Eigentums- und Schutzrechte an Portfolio, einschließlich aller zugehörigen urheberrechtlich geschützten Materialien, Marken und sonstigen geschützten Informationen.",
+        "useTitle": "Nutzung des Produkts",
+        "useText": "Portfolio darf ausschließlich für rechtmäßige Zwecke und in Übereinstimmung mit allen geltenden Gesetzen und Vorschriften genutzt werden. Jegliche Nutzung von Portfolio für rechtswidrige Aktivitäten oder zur Belästigung, Schädigung, Bedrohung oder Einschüchterung anderer Personen ist ausdrücklich untersagt. Du bist allein für deine Interaktionen mit anderen Nutzern von Portfolio verantwortlich.",
+        "disclaimerTitle": "Haftungsausschluss und Haftungsbeschränkung",
+        "disclaimerText": "Portfolio wird ohne jegliche ausdrückliche oder stillschweigende Gewährleistung im vorliegenden Zustand bereitgestellt. Dies umfasst insbesondere, aber nicht ausschließlich, stillschweigende Gewährleistungen der Marktgängigkeit, Eignung für einen bestimmten Zweck und Nichtverletzung von Rechten Dritter. In keinem Fall haften wir, die aufgeführten Studierenden, oder die Developer Akademie für direkte, indirekte, zufällige, besondere, Folge- oder exemplarische Schäden, einschließlich, aber nicht beschränkt auf Schäden durch entgangene Gewinne, Verlust von Geschäfts- oder Firmenwert, Nutzungsausfall, Datenverlust oder sonstige immaterielle Verluste, selbst wenn wir auf die Möglichkeit solcher Schäden hingewiesen wurden, die aus der Nutzung oder Leistung von Portfolio entstehen oder damit zusammenhängen.",
+        "indemnityTitle": "Freistellung",
+        "indemnityText": "Du erklärst dich damit einverstanden, uns, die aufgeführten Studierenden, die Developer Akademie sowie unsere verbundenen Unternehmen, Partner, leitenden Angestellten, Direktoren, Vertreter und Mitarbeitenden von sämtlichen Ansprüchen, Forderungen, Verlusten, Schäden, Kosten oder Verbindlichkeiten, einschließlich angemessener Rechtskosten, freizustellen, zu verteidigen und schadlos zu halten, die aus deiner Nutzung von Portfolio und/oder deinem Verstoß gegen dieses Impressum entstehen oder damit zusammenhängen.",
+        "contactNotice": "Bei Fragen oder Hinweisen kontaktiere uns bitte unter <a href=\"mailto:m.zeitler1987@outlook.de\">m.zeitler1987@outlook.de</a>.",
+        "date": "Stand: 26. Juli 2025"
     }
 }

@@ -1,18 +1,43 @@
 // Language switch logic
 
+const LANGUAGE_STORAGE_KEY = 'portfolioLanguage';
+
 let currentTranslations = {};
 
 function setupLanguageSwitch() {
+    bindLanguageButtons();
+    loadSavedLanguage();
+}
+
+function bindLanguageButtons() {
     const languageButtons = document.querySelectorAll('.language-btn[data-lang]');
 
     languageButtons.forEach((button) => {
         button.addEventListener('click', () => {
-            const selectedLanguage = button.dataset.lang;
-
-            setActiveLanguageButton(selectedLanguage);
-            loadLanguageFile(selectedLanguage);
+            handleLanguageButtonClick(button);
         });
     });
+}
+
+function handleLanguageButtonClick(button) {
+    const selectedLanguage = button.dataset.lang;
+
+    saveSelectedLanguage(selectedLanguage);
+    setActiveLanguageButton(selectedLanguage);
+    loadLanguageFile(selectedLanguage);
+}
+
+function loadSavedLanguage() {
+    const savedLanguage = localStorage.getItem(LANGUAGE_STORAGE_KEY);
+
+    if (!savedLanguage) return;
+
+    setActiveLanguageButton(savedLanguage);
+    loadLanguageFile(savedLanguage);
+}
+
+function saveSelectedLanguage(language) {
+    localStorage.setItem(LANGUAGE_STORAGE_KEY, language);
 }
 
 function setActiveLanguageButton(language) {
