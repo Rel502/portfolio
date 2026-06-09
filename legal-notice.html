@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="./css/header.css">
     <link rel="stylesheet" href="./css/legal.css">
     <link rel="stylesheet" href="./css/footer.css">
+    <script src="./js/mobile-menu.js" defer></script>
     <script src="./js/language.js" defer></script>
     <script src="./js/main.js" defer></script>
 </head>
@@ -30,7 +31,8 @@
                 </span>
             </a>
 
-            <div class="navbar-menu" id="navbarMenu">
+            <div class="navbar-menu mobile-hero-menu" id="mobileHeroMenu" aria-label="Mobile navigation"
+                data-i18n-aria-label="aria.mobileNavigation">
                 <div class="mobile-menu-content">
                     <ul class="nav-list">
                         <li><a href="./index.html#about" data-i18n="nav.about">About me</a></li>
@@ -46,11 +48,9 @@
                 </div>
             </div>
 
-            <button class="burger-btn" type="button" aria-label="Menü öffnen" aria-controls="navbarMenu"
-                aria-expanded="false">
-                <span></span>
-                <span></span>
-                <span></span>
+            <button class="burger-btn" type="button" aria-label="Menü öffnen" data-i18n-aria-label="aria.openMenu"
+                aria-controls="mobileHeroMenu" aria-expanded="false">
+                <img src="./assets/icons/burger-menu-default.svg" alt="" class="burger-icon">
             </button>
         </nav>
     </header>

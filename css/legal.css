@@ -71,6 +71,34 @@
         padding: 128px 30px 80px;
     }
 
+    .header .mobile-hero-menu {
+        position: absolute;
+        top: 88px;
+        left: 50%;
+        z-index: 210;
+
+        width: min(330px, calc(100vw - 48px));
+        height: 330px;
+        padding: 56px 32px;
+        box-sizing: border-box;
+
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        background-image: url("../assets/icons/ellipse-hero-default.svg");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 100% 100%;
+
+        transform: translateX(-50%);
+    }
+
+    .header .mobile-hero-menu.is-open {
+        display: flex;
+    }
+
     .legal-content .legal-back-link {
         width: 60px;
         height: 30px;
