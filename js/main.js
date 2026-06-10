@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', init);
 
 function init() {
     setupActiveElements('.nav-list a');
-    setupScrollDownButton();
+    setupScrollButtons();
     setupAboutLocationAnimation();
     setupProjectTabs();
 
@@ -50,26 +50,6 @@ function bindActiveElementClick(element, elements) {
     element.addEventListener('click', () => {
         activateElement(element, elements);
     });
-}
-
-function setupScrollDownButton() {
-    const scrollElements = getScrollDownElements();
-
-    if (!scrollElements) return;
-
-    scrollElements.scrollDownButton.addEventListener('click', () => {
-        activateElement(scrollElements.aboutNavLink, scrollElements.navLinks);
-    });
-}
-
-function getScrollDownElements() {
-    const scrollDownButton = document.querySelector('.scroll-down');
-    const aboutNavLink = document.querySelector('.nav-list a[href="#about"]');
-    const navLinks = document.querySelectorAll('.nav-list a');
-
-    if (!scrollDownButton || !aboutNavLink) return null;
-
-    return { scrollDownButton, aboutNavLink, navLinks };
 }
 
 function setupAboutLocationAnimation() {
