@@ -1,6 +1,14 @@
 const SCROLL_OVERSHOOT_DISTANCE = 48;
 
+function setInitialScrollPosition() {
+    if (window.location.hash) return;
+
+    window.scrollTo(0, SCROLL_OVERSHOOT_DISTANCE);
+}
+
 function setupScrollButtons() {
+    setInitialScrollPosition();
+
     const scrollButtons = getScrollButtons();
 
     scrollButtons.forEach((button) => {
@@ -9,9 +17,7 @@ function setupScrollButtons() {
 }
 
 function getScrollButtons() {
-    return document.querySelectorAll(
-        '.scroll-down, .contact-scroll-top, .nav-list a[href^="#"], .mobile-hero-menu-list a[href^="#"]'
-    );
+    return document.querySelectorAll('a[href^="#"]');
 }
 
 function handleScrollButtonClick(event, button) {
