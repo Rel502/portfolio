@@ -20,7 +20,7 @@ const ICON_FADE_DURATION = 300;
 document.addEventListener('DOMContentLoaded', init);
 
 function init() {
-    setupActiveElements('.nav-list a');
+    setupActiveNavOnScroll();
     setupScrollButtons();
     setupAboutLocationAnimation();
     setupProjectTabs();
@@ -50,6 +50,41 @@ function bindActiveElementClick(element, elements) {
     element.addEventListener('click', () => {
         activateElement(element, elements);
     });
+}
+
+function setupActiveNavOnScroll() {
+    const navLinks = document.querySelectorAll('.nav-list a[href^="#"]');
+    const sections = document.querySelectorAll('main section[id]');
+
+    if (navLinks.length === 0 || sections.length === 0) return;
+
+    updateActiveNavLink(navLinks, sections);
+
+    window.addEventListener('scroll', () => {
+        updateActiveNavLink(navLinks, sections);
+    });
+}
+
+function updateActiveNavLink(navLinks, sections) {
+    const currentSectionId = getCurrentSectionId(sections);
+
+    navLinks.forEach((link) => {
+        const linkTargetId = link.getAttribute('href').replace('#', '');
+        link.classList.toggle('active', linkTargetId === currentSectionId);
+    });
+}
+
+function getCurrentSectionId(sections) {
+    const scrollPosition = window.scrollY + window.innerHeight * 0.35;
+    let currentSectionId = '';
+
+    sections.forEach((section) => {
+        if (scrollPosition >= section.offsetTop) {
+            currentSectionId = section.id;
+        }
+    });
+
+    return currentSectionId;
 }
 
 function setupAboutLocationAnimation() {

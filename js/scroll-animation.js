@@ -1,9 +1,16 @@
 const SCROLL_OVERSHOOT_DISTANCE = 48;
+const MOBILE_SCROLL_QUERY = '(max-width: 1024px)';
+
+function getScrollOvershootDistance() {
+    const isMobileLayout = window.matchMedia(MOBILE_SCROLL_QUERY).matches;
+
+    return isMobileLayout ? 0 : SCROLL_OVERSHOOT_DISTANCE;
+}
 
 function setInitialScrollPosition() {
     if (window.location.hash) return;
 
-    window.scrollTo(0, SCROLL_OVERSHOOT_DISTANCE);
+    window.scrollTo(0, getScrollOvershootDistance());
 }
 
 function setupScrollButtons() {
@@ -49,16 +56,17 @@ function scrollToSection(sectionId) {
 
 function getOvershootScrollTarget(targetPosition) {
     const isScrollingUp = targetPosition < window.scrollY;
+    const overshootDistance = getScrollOvershootDistance();
 
     if (isScrollingUp) {
         return {
             overshootPosition: targetPosition,
-            finalPosition: targetPosition + SCROLL_OVERSHOOT_DISTANCE
+            finalPosition: targetPosition + overshootDistance
         };
     }
 
     return {
-        overshootPosition: targetPosition + SCROLL_OVERSHOOT_DISTANCE,
+        overshootPosition: targetPosition + overshootDistance,
         finalPosition: targetPosition
     };
 }
