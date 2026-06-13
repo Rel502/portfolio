@@ -9,7 +9,9 @@ function setupScrollButtons() {
 }
 
 function getScrollButtons() {
-    return document.querySelectorAll('.scroll-down, .contact-scroll-top');
+    return document.querySelectorAll(
+        '.scroll-down, .contact-scroll-top, .nav-list a[href^="#"], .mobile-hero-menu-list a[href^="#"]'
+    );
 }
 
 function handleScrollButtonClick(event, button) {
