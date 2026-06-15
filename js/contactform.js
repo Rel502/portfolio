@@ -35,12 +35,12 @@ function bindContactFields(contactForm, contactElements) {
 }
 
 function bindContactFieldEvents(field, contactForm, submitButton) {
-    field.addEventListener('input', () => {
-        handleContactFieldChange(field, contactForm, submitButton);
+    field.addEventListener('blur', () => {
+        handleContactFieldBlur(field, contactForm, submitButton);
     });
 
-    field.addEventListener('change', () => {
-        handleContactFieldChange(field, contactForm, submitButton);
+    field.addEventListener('input', () => {
+        updateContactSubmitButton(contactForm, submitButton);
     });
 }
 
@@ -68,7 +68,7 @@ function scheduleContactFormStateUpdate(contactForm, submitButton) {
     }, 200);
 }
 
-function handleContactFieldChange(field, contactForm, submitButton) {
+function handleContactFieldBlur(field, contactForm, submitButton) {
     validateContactField(field);
     updateContactFormState(contactForm, submitButton);
 }

@@ -150,6 +150,7 @@
 .form-group:has(input:not(:placeholder-shown):valid) input,
 .form-group:has(textarea:not(:placeholder-shown):valid) textarea {
     border-color: var(--color-primary);
+    color: var(--color-secondary);
 }
 
 .form-group:has(input:valid) label,
