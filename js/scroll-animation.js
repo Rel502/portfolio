@@ -1,4 +1,4 @@
-const SCROLL_OVERSHOOT_DISTANCE = 48;
+const SCROLL_OVERSHOOT_DISTANCE = 32;
 const MOBILE_SCROLL_QUERY = '(max-width: 1024px)';
 
 function getScrollOvershootDistance() {

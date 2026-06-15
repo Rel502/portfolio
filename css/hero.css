@@ -3,7 +3,7 @@
 /* ============================= */
 
 .landing {
-    min-height: calc(95vh - var(--navbar-height));
+    min-height: calc(100vh - var(--navbar-height));
     display: flex;
     flex-direction: column;
 }
