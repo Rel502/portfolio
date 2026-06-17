@@ -103,6 +103,25 @@
     gap: 16px;
 }
 
+@media (min-width: 1025px) {
+    .hero-right {
+        grid-template-rows: auto auto auto;
+        align-content: flex-end;
+        row-gap: clamp(20px, 3vh, 40px);
+        padding-bottom: 80px;
+    }
+
+    .hero-socials {
+        top: clamp(109px, 18vh, 390px);
+    }
+}
+
+@media (min-width: 1921px) and (min-height: 1200px) {
+    .hero-socials {
+        top: clamp(109px, 48vh, 648px);
+    }
+}
+
 .hero-logo {
     grid-row: 1;
     align-self: end;
