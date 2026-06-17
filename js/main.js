@@ -19,6 +19,7 @@ const ICON_FADE_DURATION = 300;
 
 document.addEventListener('DOMContentLoaded', init);
 
+/** Initializes all page features after the DOM is ready. */
 function init() {
     setupActiveNavOnScroll();
     setupScrollButtons();
@@ -38,6 +39,10 @@ function init() {
     }
 }
 
+/**
+ * Binds click handling to a group of active elements.
+ * @param {string} selector - The CSS selector for the elements.
+ */
 function setupActiveElements(selector) {
     const elements = document.querySelectorAll(selector);
 
@@ -46,12 +51,18 @@ function setupActiveElements(selector) {
     });
 }
 
+/**
+ * Binds the active state click handler to an element.
+ * @param {Element} element - The clicked element.
+ * @param {NodeListOf<Element>} elements - All related elements.
+ */
 function bindActiveElementClick(element, elements) {
     element.addEventListener('click', () => {
         activateElement(element, elements);
     });
 }
 
+/** Updates the active navigation link while scrolling. */
 function setupActiveNavOnScroll() {
     const navLinks = document.querySelectorAll('.nav-list a[href^="#"]');
     const sections = document.querySelectorAll('main section[id]');
@@ -65,6 +76,11 @@ function setupActiveNavOnScroll() {
     });
 }
 
+/**
+ * Sets the active navigation link for the current section.
+ * @param {NodeListOf<HTMLAnchorElement>} navLinks - The navigation links.
+ * @param {NodeListOf<HTMLElement>} sections - The page sections.
+ */
 function updateActiveNavLink(navLinks, sections) {
     const currentSectionId = getCurrentSectionId(sections);
 
@@ -74,6 +90,11 @@ function updateActiveNavLink(navLinks, sections) {
     });
 }
 
+/**
+ * Returns the id of the currently visible section.
+ * @param {NodeListOf<HTMLElement>} sections - The page sections.
+ * @returns {string} The current section id.
+ */
 function getCurrentSectionId(sections) {
     const scrollPosition = window.scrollY + window.innerHeight * 0.35;
     let currentSectionId = '';
@@ -87,6 +108,7 @@ function getCurrentSectionId(sections) {
     return currentSectionId;
 }
 
+/** Initializes the animated about location text. */
 function setupAboutLocationAnimation() {
     const aboutElements = getAboutLocationElements();
 
@@ -96,6 +118,10 @@ function setupAboutLocationAnimation() {
     observeAboutSection(aboutElements);
 }
 
+/**
+ * Returns the elements used for the about location animation.
+ * @returns {{section: HTMLElement, icon: HTMLImageElement, text: HTMLElement}|null} The about elements.
+ */
 function getAboutLocationElements() {
     const section = document.getElementById('about');
     const icon = document.getElementById('aboutLocationIcon');
@@ -106,11 +132,19 @@ function getAboutLocationElements() {
     return { section, icon, text };
 }
 
+/**
+ * Sets the initial about location icon and text.
+ * @param {Object} aboutElements - The about location elements.
+ */
 function prepareAboutLocation(aboutElements) {
     aboutElements.icon.src = ABOUT_LOCATION_ITEMS[0].icon;
     aboutElements.text.textContent = '';
 }
 
+/**
+ * Starts observing the about section.
+ * @param {Object} aboutElements - The about location elements.
+ */
 function observeAboutSection(aboutElements) {
     const observer = new IntersectionObserver((entries) => {
         startAnimationWhenVisible(entries, observer, aboutElements);
@@ -121,6 +155,12 @@ function observeAboutSection(aboutElements) {
     observer.observe(aboutElements.section);
 }
 
+/**
+ * Starts the about animation once the section is visible.
+ * @param {IntersectionObserverEntry[]} entries - The observer entries.
+ * @param {IntersectionObserver} observer - The section observer.
+ * @param {Object} aboutElements - The about location elements.
+ */
 function startAnimationWhenVisible(entries, observer, aboutElements) {
     if (!entries[0].isIntersecting) return;
 
@@ -128,6 +168,12 @@ function startAnimationWhenVisible(entries, observer, aboutElements) {
     observer.disconnect();
 }
 
+/**
+ * Runs the about location text and icon loop.
+ * @param {HTMLImageElement} iconElement - The location icon.
+ * @param {HTMLElement} textElement - The location text element.
+ * @returns {Promise<void>}
+ */
 async function startAboutLocationLoop(iconElement, textElement) {
     let currentIndex = 0;
 
@@ -138,6 +184,12 @@ async function startAboutLocationLoop(iconElement, textElement) {
     }
 }
 
+/**
+ * Types and deletes the current about location text.
+ * @param {HTMLElement} textElement - The text element.
+ * @param {number} currentIndex - The current location index.
+ * @returns {Promise<void>}
+ */
 async function animateAboutLocationText(textElement, currentIndex) {
     const currentItem = ABOUT_LOCATION_ITEMS[currentIndex];
     const currentText = getCurrentTranslation(currentItem.textKey, currentItem.fallbackText);
@@ -147,10 +199,21 @@ async function animateAboutLocationText(textElement, currentIndex) {
     await deleteText(textElement);
 }
 
+/**
+ * Returns the next about location index.
+ * @param {number} currentIndex - The current location index.
+ * @returns {number} The next location index.
+ */
 function getNextLocationIndex(currentIndex) {
     return (currentIndex + 1) % ABOUT_LOCATION_ITEMS.length;
 }
 
+/**
+ * Switches the about location icon with a fade effect.
+ * @param {HTMLImageElement} iconElement - The location icon.
+ * @param {number} currentIndex - The current location index.
+ * @returns {Promise<void>}
+ */
 async function switchLocationIcon(iconElement, currentIndex) {
     iconElement.classList.add('is-hidden');
     await wait(ICON_FADE_DURATION);
@@ -159,6 +222,12 @@ async function switchLocationIcon(iconElement, currentIndex) {
     iconElement.classList.remove('is-hidden');
 }
 
+/**
+ * Types text into an element character by character.
+ * @param {HTMLElement} element - The target element.
+ * @param {string} text - The text to type.
+ * @returns {Promise<void>}
+ */
 async function typeText(element, text) {
     element.textContent = '';
 
@@ -168,6 +237,11 @@ async function typeText(element, text) {
     }
 }
 
+/**
+ * Deletes text from an element character by character.
+ * @param {HTMLElement} element - The target element.
+ * @returns {Promise<void>}
+ */
 async function deleteText(element) {
     while (element.textContent.length > 0) {
         element.textContent = element.textContent.slice(0, -1);
@@ -175,6 +249,7 @@ async function deleteText(element) {
     }
 }
 
+/** Initializes the project tab switching. */
 function setupProjectTabs() {
     const projectTabs = document.querySelectorAll('.project-tab');
     const projectPanels = document.querySelectorAll('.project-panel');
@@ -186,6 +261,12 @@ function setupProjectTabs() {
     });
 }
 
+/**
+ * Binds the click handler for a project tab.
+ * @param {HTMLElement} tab - The project tab.
+ * @param {NodeListOf<HTMLElement>} projectTabs - All project tabs.
+ * @param {NodeListOf<HTMLElement>} projectPanels - All project panels.
+ */
 function bindProjectTabClick(tab, projectTabs, projectPanels) {
     tab.addEventListener('click', () => {
         const selectedProject = tab.dataset.project;
@@ -195,11 +276,21 @@ function bindProjectTabClick(tab, projectTabs, projectPanels) {
     });
 }
 
+/**
+ * Activates the selected project tab.
+ * @param {HTMLElement} activeTab - The selected project tab.
+ * @param {NodeListOf<HTMLElement>} projectTabs - All project tabs.
+ */
 function activateProjectTab(activeTab, projectTabs) {
     resetActive(projectTabs);
     setActive(activeTab);
 }
 
+/**
+ * Shows the matching project panel.
+ * @param {string} selectedProject - The selected project key.
+ * @param {NodeListOf<HTMLElement>} projectPanels - All project panels.
+ */
 function showProjectPanel(selectedProject, projectPanels) {
     projectPanels.forEach((panel) => {
         const isSelectedPanel = panel.dataset.project === selectedProject;
@@ -208,21 +299,39 @@ function showProjectPanel(selectedProject, projectPanels) {
     });
 }
 
+/**
+ * Activates one element and resets the others.
+ * @param {Element} activeElement - The element to activate.
+ * @param {NodeListOf<Element>} elements - All related elements.
+ */
 function activateElement(activeElement, elements) {
     resetActive(elements);
     setActive(activeElement);
 }
 
+/**
+ * Removes the active class from all elements.
+ * @param {NodeListOf<Element>} elements - The elements to reset.
+ */
 function resetActive(elements) {
     elements.forEach((element) => {
         element.classList.remove('active');
     });
 }
 
+/**
+ * Adds the active class to an element.
+ * @param {Element} element - The element to activate.
+ */
 function setActive(element) {
     element.classList.add('active');
 }
 
+/**
+ * Waits for a given duration.
+ * @param {number} duration - The duration in milliseconds.
+ * @returns {Promise<void>}
+ */
 function wait(duration) {
     return new Promise((resolve) => {
         setTimeout(resolve, duration);
