@@ -301,3 +301,44 @@
         height: 48px;
     }
 }
+
+
+/* ============================= */
+/* Skills Large Screens          */
+/* ============================= */
+
+@media (min-width: 1441px) {
+    .skill-icon {
+        width: 96px;
+        height: 96px;
+    }
+
+    .learning-icon {
+        width: 64px;
+        height: 64px;
+    }
+}
+
+@media (min-width: 1921px) {
+    .skill-icon {
+        width: 112px;
+        height: 112px;
+    }
+
+    .learning-icon {
+        width: 72px;
+        height: 72px;
+    }
+}
+
+@media (min-width: 2560px) {
+    .skill-icon {
+        width: 128px;
+        height: 128px;
+    }
+
+    .learning-icon {
+        width: 80px;
+        height: 80px;
+    }
+}
