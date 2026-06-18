@@ -2,10 +2,6 @@
 /* Basis Styles                  */
 /* ============================= */
 
-/* html {
-    scroll-behavior: smooth;
-} */
-
 body {
     margin: 0;
     box-sizing: border-box;
@@ -25,4 +21,10 @@ h6 {
 
 section {
     scroll-margin-top: var(--navbar-height);
+}
+
+@media (max-width: 1024px) {
+    section {
+        scroll-margin-top: 0;
+    }
 }
