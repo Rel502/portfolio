@@ -274,3 +274,36 @@
         top: clamp(109px, 48vh, 648px);
     }
 }
+
+
+/* ============================= */
+/* Hero Large Screens            */
+/* ============================= */
+
+@media (min-width: 1921px) {
+    .hero-image-wrapper {
+        width: min(600px, 86%);
+    }
+
+    .hero-intro h1 {
+        font-size: 96px;
+    }
+
+    .hero-intro p {
+        font-size: 44px;
+    }
+}
+
+@media (min-width: 2560px) {
+    .hero-image-wrapper {
+        width: min(660px, 92%);
+    }
+
+    .hero-intro h1 {
+        font-size: 104px;
+    }
+
+    .hero-intro p {
+        font-size: 48px;
+    }
+}
