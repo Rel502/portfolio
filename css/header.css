@@ -12,14 +12,14 @@
 }
 
 .navbar {
-    max-width: 1040px;
+    max-width: var(--content-max-width);
     height: var(--navbar-height);
     margin: 0 auto;
-    padding: 0 24px;
-
+    padding: 0 120px;
     display: grid;
     grid-template-columns: 72px 1fr 72px;
     align-items: center;
+    box-sizing: border-box;
 }
 
 .navbar-menu {
