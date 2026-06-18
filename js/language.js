@@ -35,9 +35,7 @@ function handleLanguageButtonClick(button) {
 
 /** Loads the saved language from local storage. */
 function loadSavedLanguage() {
-    const savedLanguage = localStorage.getItem(LANGUAGE_STORAGE_KEY);
-
-    if (!savedLanguage) return;
+    const savedLanguage = localStorage.getItem(LANGUAGE_STORAGE_KEY) || 'en';
 
     setActiveLanguageButton(savedLanguage);
     loadLanguageFile(savedLanguage);

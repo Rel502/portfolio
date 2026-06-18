@@ -22,7 +22,11 @@ document.addEventListener('DOMContentLoaded', init);
 /** Initializes all page features after the DOM is ready. */
 function init() {
     setupActiveNavOnScroll();
-    setupScrollButtons();
+
+    if (typeof setupScrollButtons === 'function') {
+        setupScrollButtons();
+    }
+
     setupAboutLocationAnimation();
     setupProjectTabs();
 
