@@ -19,8 +19,17 @@ function setupMobileMenu() {
 
     if (!mobileMenu) return;
 
+    preloadBurgerIcons();
     bindBurgerButton(mobileMenu);
     bindMobileMenuLinks(mobileMenu);
+}
+
+/** Preloads all burger menu icons. */
+function preloadBurgerIcons() {
+    BURGER_ICONS.forEach((iconPath) => {
+        const image = new Image();
+        image.src = iconPath;
+    });
 }
 
 /**
