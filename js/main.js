@@ -27,6 +27,10 @@ function init() {
         setupScrollButtons();
     }
 
+    if (typeof setupScrollReveal === 'function') {
+        setupScrollReveal();
+    }
+
     setupAboutLocationAnimation();
     setupProjectTabs();
 

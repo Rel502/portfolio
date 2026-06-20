@@ -59,3 +59,45 @@
 .p-3 {
     padding: 1.5rem;
 }
+
+
+/* ============================= */
+/* Scroll Reveal                 */
+/* ============================= */
+
+.scroll-reveal {
+    opacity: 0;
+    transform: translateY(32px);
+    transition:
+        opacity 500ms ease,
+        transform 500ms ease;
+}
+
+.scroll-reveal.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.scroll-reveal-right {
+    transform: translateX(48px);
+}
+
+.scroll-reveal-right.is-visible {
+    transform: translateX(0);
+}
+
+.scroll-delay-short {
+    transition-delay: 100ms;
+}
+
+.scroll-delay-medium {
+    transition-delay: 200ms;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .scroll-reveal {
+        opacity: 1;
+        transform: none;
+        transition: none;
+    }
+}

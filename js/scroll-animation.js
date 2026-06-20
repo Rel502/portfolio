@@ -151,3 +151,30 @@ function getSectionPosition(section) {
 
     return Math.max(sectionPosition, 0);
 }
+
+/** Initializes scroll reveal animations. */
+function setupScrollReveal() {
+    const revealElements = document.querySelectorAll('.scroll-reveal');
+
+    if (!revealElements.length) return;
+
+    const observer = new IntersectionObserver(handleScrollReveal, {
+        threshold: 0.2
+    });
+
+    revealElements.forEach((element) => observer.observe(element));
+}
+
+/**
+ * Reveals elements when they enter the viewport.
+ * @param {IntersectionObserverEntry[]} entries - The observed entries.
+ * @param {IntersectionObserver} observer - The reveal observer.
+ */
+function handleScrollReveal(entries, observer) {
+    entries.forEach((entry) => {
+        if (!entry.isIntersecting) return;
+
+        entry.target.classList.add('is-visible');
+        observer.unobserve(entry.target);
+    });
+}
