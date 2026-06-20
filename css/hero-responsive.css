@@ -271,7 +271,10 @@
 
 @media (min-width: 1921px) and (min-height: 1200px) {
     .hero-socials {
-        top: clamp(109px, 48vh, 648px);
+        top: clamp(109px, 48vh, 280px);
+    }
+    .hero-right {
+        grid-template-rows: 2fr 1fr 0fr;
     }
 }
 
@@ -281,8 +284,13 @@
 /* ============================= */
 
 @media (min-width: 1921px) {
+    .hero {
+        padding: 0;
+        gap: 16px;
+    }
+
     .hero-image-wrapper {
-        width: min(600px, 86%);
+        flex: 1;
     }
 
     .hero-intro h1 {
@@ -297,10 +305,6 @@
 @media (min-width: 2560px) {
     .hero-image-wrapper {
         width: min(660px, 92%);
-    }
-
-    .hero-intro h1 {
-        font-size: 104px;
     }
 
     .hero-intro p {

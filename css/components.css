@@ -146,8 +146,11 @@
 }
 
 .section-content {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    display: flex;
+    justify-content: space-between;
+
+    /* display: grid;
+    grid-template-columns: 1fr 1fr; */
     gap: 96px;
 }
 
@@ -285,5 +288,22 @@
     .section-title {
         margin: 0 0 32px;
         font-size: 32px;
+    }
+}
+
+
+/* ============================= */
+/* Layout Large Screens          */
+/* ============================= */
+
+@media (min-width: 1921px) {
+    .section {
+        padding: 96px 0;
+    }
+}
+
+@media (min-width: 1921px) and (min-height: 1200px) {
+    .scroll-down {
+        scale: 1.5;
     }
 }

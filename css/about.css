@@ -114,3 +114,14 @@
         line-height: 130%;
     }
 }
+
+
+/* ============================= */
+/* About Large Screens           */
+/* ============================= */
+
+@media (min-width: 1921px) {
+    .about-location {
+        justify-content: normal;
+    }
+}

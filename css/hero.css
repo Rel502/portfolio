@@ -15,11 +15,14 @@
     flex: 1;
     display: grid;
     grid-template-columns: 1fr 1fr;
+
+    padding: 0 120px;
+    box-sizing: border-box;
 }
 
 .hero-left {
     display: flex;
-    justify-content: center;
+    /* justify-content: center; */
     align-items: center;
 }
 

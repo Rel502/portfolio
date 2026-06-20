@@ -175,3 +175,14 @@ footer .logo-name {
         font-size: 18px;
     }
 }
+
+
+/* ============================= */
+/* Footer Large Screens          */
+/* ============================= */
+
+@media (min-width: 1921px) {
+    .footer-content {
+        padding: 32px 0;
+    }
+}

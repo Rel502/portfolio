@@ -147,7 +147,7 @@ function easeInOutCubic(progress) {
  */
 function getSectionPosition(section) {
     const scrollMarginTop = parseFloat(getComputedStyle(section).scrollMarginTop) || 0;
-    const sectionPosition = section.offsetTop - scrollMarginTop;
+    const sectionPosition = section.offsetTop - scrollMarginTop + 48;
 
     return Math.max(sectionPosition, 0);
 }

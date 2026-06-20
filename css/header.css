@@ -267,3 +267,14 @@
         display: block;
     }
 }
+
+
+/* ============================= */
+/* Header Large Screens          */
+/* ============================= */
+
+@media (min-width: 1921px) {
+    .navbar {
+        padding: 0;
+    }
+}
