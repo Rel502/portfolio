@@ -285,6 +285,9 @@
 
 @media (min-width: 1921px) {
     .hero {
+        display: flex;
+        justify-content: center;
+        align-items: center;
         padding: 0;
         gap: 16px;
     }
