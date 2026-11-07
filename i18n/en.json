@@ -87,13 +87,15 @@
             "privacyLink": "privacy policy",
             "privacyEnd": "and agree to the processing of my data as outlined.",
             "privacyRequired": "Please accept the privacy policy.",
-            "privacyText": "I've read the <a href=\"./legal-notice.html#privacy-policy\" class=\"privacy-link\">privacy policy</a> and agree to the processing of my data as outlined.",
+            "privacyText": "I have read the <a href=\"./datenschutz.html#privacy-policy\" class=\"privacy-link\">privacy policy</a> and agree to the processing of my data as described.",
             "send": "Send",
             "success": "Your message has been sent successfully."
         }
     },
     "footer": {
-        "legalNotice": "Legal notice"
+        "legalNotice": "Legal notice",
+        "imprint": "Imprint",
+        "privacy": "Privacy Policy"
     },
     "legal": {
         "pageTitle": "Legal Notice",
@@ -117,5 +119,48 @@
         "indemnityText": "You agree to indemnify, defend and hold harmless us, the listed students, Developer Akademie, and our affiliates, partners, officers, directors, agents, and employees from and against any claim, demand, loss, damage, cost, or liability, including reasonable legal fees, arising out of or relating to your use of Portfolio and/or your breach of this Legal Notice.",
         "contactNotice": "For any questions or notices, please contact us at <a href=\"mailto:m.zeitler1987@outlook.de\">m.zeitler1987@outlook.de</a>.",
         "date": "Date: July 26, 2025"
+    },
+    "imprint": {
+        "pageTitle": "Imprint | Michael Zeitler",
+        "title": "Imprint",
+        "info": "Information pursuant to Section 5 DDG",
+        "contact": "Contact",
+        "copyrightTitle": "Copyright",
+        "address": "Michael Zeitler<br>Felix-Dahn-Str. 2<br>60431 Frankfurt am Main<br>Germany",
+        "email": "Email: <a href=\"mailto:m.zeitler1987@outlook.de\">m.zeitler1987@outlook.de</a>",
+        "formContact": "You can also contact me using the <a href=\"./index.html#contact\">contact form</a> on this website.",
+        "copyrightText": "The content published on this website, particularly texts, graphics and projects I have developed, is subject to applicable copyright law insofar as it is protected by copyright. Any use of protected content beyond what is permitted by law requires the permission of the respective rights holder. Third-party rights remain unaffected."
+    },
+    "privacy": {
+        "pageTitle": "Privacy Policy | Michael Zeitler",
+        "title": "Privacy Policy",
+        "controller": "1. Data Controller",
+        "purpose": "2. Purpose of This Website",
+        "hosting": "3. Hosting and Server Logs",
+        "contact": "4. Contact Form",
+        "email": "5. Email Service",
+        "storage": "6. Local Storage of Language Preference",
+        "links": "7. External Links",
+        "rights": "8. Your Rights",
+        "dateTitle": "9. Last Updated",
+        "controllerAddress": "Michael Zeitler<br>Felix-Dahn-Str. 2<br>60431 Frankfurt am Main<br>Germany<br>Email: <a href=\"mailto:m.zeitler1987@outlook.de\">m.zeitler1987@outlook.de</a>",
+        "purposeText": "This website is used to present me professionally and personally, as well as to showcase my skills and software development projects. Personal data is processed where necessary for the technical operation and security of the website and to respond to contact enquiries.",
+        "hostingProvider": "This website is hosted by:<br>ALL-INKL.COM – Neue Medien Münnich<br>Owner: René Münnich<br>Hauptstraße 68<br>02742 Friedersdorf<br>Germany",
+        "hostingData": "When you visit this website, technically necessary information may be processed, including your IP address, access time, requested files, browser and operating system details, referrer URL (if transmitted), and HTTP status codes.",
+        "hostingPurpose": "This processing serves to ensure the secure and reliable operation of the website, troubleshoot errors, and prevent misuse. The legal basis is Art. 6(1)(f) GDPR (legitimate interest in the security and operation of this website).",
+        "hostingRetention": "Server log retention periods depend on the configuration of the hosting package and the applicable deletion periods.",
+        "hostingInfo": "Further information: <a href=\"https://all-inkl.com/datenschutzinformationen/\" target=\"_blank\" rel=\"noopener noreferrer\">ALL-INKL privacy information</a>.",
+        "contactData": "When you use the contact form, your name, email address and message are processed. The form sends this information to a PHP script at michaelzeitler.de, which forwards the message by email to my Outlook.com mailbox.",
+        "contactPurpose": "The purpose is to respond to your enquiry and communicate with you. The legal basis is Art. 6(1)(f) GDPR (legitimate interest in responding to enquiries). Where an enquiry concerns pre-contractual measures, Art. 6(1)(b) GDPR may apply.",
+        "contactRetention": "Providing this information is voluntary. Without a valid email address, I may be unable to respond to your message. Messages are deleted when they are no longer needed for their purpose and no legal retention obligations or other legitimate reasons require continued storage.",
+        "contactImplementation": "The form uses a custom server-side implementation for transmission. No external contact-form service is used.",
+        "emailText": "I use Outlook.com, a Microsoft service, to receive and respond to messages. Microsoft also processes personal data transmitted during these communications. Depending on the service configuration, data may be processed outside the European Economic Area.",
+        "emailInfo": "For more information, please see the <a href=\"https://www.microsoft.com/de-de/privacy/privacystatement\" target=\"_blank\" rel=\"noopener noreferrer\">Microsoft Privacy Statement</a>.",
+        "storageText": "This website saves your selected language in your browser’s Local Storage under the key <strong>portfolioLanguage</strong> so that your language preference is retained when you visit other pages. This information is used solely to store this preference.",
+        "storageOther": "Any additional cookies or comparable technologies depend on the actual technical configuration of the website.",
+        "linksText": "This website contains links to external platforms, particularly GitHub and LinkedIn. Clicking these links takes you away from this website. The operators of those external websites are responsible for processing personal data on their services.",
+        "rightsText": "Subject to statutory conditions, you have rights of access (Art. 15 GDPR), rectification (Art. 16 GDPR), erasure (Art. 17 GDPR), restriction of processing (Art. 18 GDPR), data portability (Art. 20 GDPR) and objection (Art. 21 GDPR). You can withdraw any consent you have given at any time with future effect (Art. 7(3) GDPR).",
+        "rightsAuthority": "You also have the right to lodge a complaint with a competent data protection supervisory authority (Art. 77 GDPR). In Hesse, this is the Hessian Commissioner for Data Protection and Freedom of Information. More information is available at <a href=\"https://datenschutz.hessen.de\" target=\"_blank\" rel=\"noopener noreferrer\">datenschutz.hessen.de</a>.",
+        "lastUpdated": "Last updated: 6 November 2026"
     }
 }

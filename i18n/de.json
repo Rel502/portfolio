@@ -87,13 +87,15 @@
             "privacyLink": "Datenschutzerklärung",
             "privacyEnd": "gelesen und stimme der Verarbeitung meiner Daten wie beschrieben zu.",
             "privacyRequired": "Bitte akzeptiere die Datenschutzerklärung.",
-            "privacyText": "Ich habe die <a href=\"./legal-notice.html#privacy-policy\" class=\"privacy-link\">Datenschutzerklärung</a> gelesen und stimme der Verarbeitung meiner Daten wie beschrieben zu.",
+            "privacyText": "Ich habe die <a href=\"./datenschutz.html#privacy-policy\" class=\"privacy-link\">Datenschutzerklärung</a> gelesen und stimme der Verarbeitung meiner Daten wie beschrieben zu.",
             "send": "Senden",
             "success": "Deine Nachricht wurde erfolgreich gesendet."
         }
     },
     "footer": {
-        "legalNotice": "Impressum"
+        "legalNotice": "Impressum",
+        "imprint": "Impressum",
+        "privacy": "Datenschutz"
     },
     "legal": {
         "pageTitle": "Impressum",
@@ -117,5 +119,48 @@
         "indemnityText": "Du erklärst dich damit einverstanden, uns, die aufgeführten Studierenden, die Developer Akademie sowie unsere verbundenen Unternehmen, Partner, leitenden Angestellten, Direktoren, Vertreter und Mitarbeitenden von sämtlichen Ansprüchen, Forderungen, Verlusten, Schäden, Kosten oder Verbindlichkeiten, einschließlich angemessener Rechtskosten, freizustellen, zu verteidigen und schadlos zu halten, die aus deiner Nutzung von Portfolio und/oder deinem Verstoß gegen dieses Impressum entstehen oder damit zusammenhängen.",
         "contactNotice": "Bei Fragen oder Hinweisen kontaktiere uns bitte unter <a href=\"mailto:m.zeitler1987@outlook.de\">m.zeitler1987@outlook.de</a>.",
         "date": "Stand: 26. Juli 2025"
+    },
+    "imprint": {
+        "pageTitle": "Impressum | Michael Zeitler",
+        "title": "Impressum",
+        "info": "Angaben gemäß § 5 DDG",
+        "contact": "Kontakt",
+        "copyrightTitle": "Urheberrecht",
+        "address": "Michael Zeitler<br>Felix-Dahn-Str. 2<br>60431 Frankfurt am Main<br>Deutschland",
+        "email": "E-Mail: <a href=\"mailto:m.zeitler1987@outlook.de\">m.zeitler1987@outlook.de</a>",
+        "formContact": "Eine weitere Kontaktmöglichkeit besteht über das <a href=\"./index.html#contact\">Kontaktformular</a> dieser Website.",
+        "copyrightText": "Die auf dieser Website veröffentlichten Inhalte, insbesondere Texte, Grafiken und selbst entwickelte Projekte, unterliegen dem geltenden Urheberrecht, soweit sie urheberrechtlich geschützt sind. Eine Verwendung geschützter Inhalte außerhalb der gesetzlichen Erlaubnisse bedarf der Zustimmung der jeweiligen Rechteinhaber. Rechte Dritter bleiben unberührt."
+    },
+    "privacy": {
+        "pageTitle": "Datenschutzerklärung | Michael Zeitler",
+        "title": "Datenschutzerklärung",
+        "controller": "1. Verantwortlicher",
+        "purpose": "2. Zweck dieser Website",
+        "hosting": "3. Hosting und Server-Logfiles",
+        "contact": "4. Kontaktformular",
+        "email": "5. E-Mail-Dienst",
+        "storage": "6. Lokale Speicherung der Sprachauswahl",
+        "links": "7. Externe Links",
+        "rights": "8. Ihre Rechte",
+        "dateTitle": "9. Stand",
+        "controllerAddress": "Michael Zeitler<br>Felix-Dahn-Str. 2<br>60431 Frankfurt am Main<br>Deutschland<br>E-Mail: <a href=\"mailto:m.zeitler1987@outlook.de\">m.zeitler1987@outlook.de</a>",
+        "purposeText": "Diese Website dient der persönlichen und beruflichen Präsentation sowie der Darstellung meiner Fähigkeiten und Projekte als Softwareentwickler. Personenbezogene Daten werden verarbeitet, soweit dies für den technischen Betrieb der Website, deren Sicherheit und die Bearbeitung von Kontaktanfragen erforderlich ist.",
+        "hostingProvider": "Diese Website wird gehostet bei:<br>ALL-INKL.COM – Neue Medien Münnich<br>Inhaber: René Münnich<br>Hauptstraße 68<br>02742 Friedersdorf<br>Deutschland",
+        "hostingData": "Beim Besuch der Website können technisch erforderliche Daten verarbeitet werden, insbesondere IP-Adresse, Zeitpunkt des Zugriffs, abgerufene Dateien, Browser- und Betriebssysteminformationen, Referrer-URL (sofern übermittelt) sowie HTTP-Statuscodes.",
+        "hostingPurpose": "Die Verarbeitung dient dem sicheren und störungsfreien Betrieb der Website, der Fehleranalyse und dem Schutz vor Missbrauch. Rechtsgrundlage ist Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse am sicheren Websitebetrieb).",
+        "hostingRetention": "Die Speicherdauer der Server-Logfiles richtet sich nach der Konfiguration des Hosting-Pakets und den dort geltenden Löschfristen.",
+        "hostingInfo": "Weitere Informationen: <a href=\"https://all-inkl.com/datenschutzinformationen/\" target=\"_blank\" rel=\"noopener noreferrer\">Datenschutzinformationen von ALL-INKL</a>.",
+        "contactData": "Bei Nutzung des Kontaktformulars werden Name, E-Mail-Adresse und Nachrichteninhalt verarbeitet. Das Formular übermittelt diese Daten an ein PHP-Skript unter michaelzeitler.de, das die Nachricht per E-Mail an mein Outlook.com-Postfach weiterleitet.",
+        "contactPurpose": "Zweck ist die Bearbeitung Ihrer Nachricht und die anschließende Kommunikation. Rechtsgrundlage ist Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse an der Beantwortung von Anfragen). Soweit eine Anfrage vorvertraglichen Maßnahmen dient, kann Art. 6 Abs. 1 lit. b DSGVO einschlägig sein.",
+        "contactRetention": "Die Angabe der Daten ist freiwillig. Ohne eine erreichbare E-Mail-Adresse kann ich Ihre Nachricht gegebenenfalls nicht beantworten. Nachrichten werden gelöscht, sobald sie für den jeweiligen Zweck nicht mehr erforderlich sind und keine rechtlichen Aufbewahrungspflichten oder sonstigen berechtigten Gründe für die weitere Speicherung bestehen.",
+        "contactImplementation": "Für die technische Übermittlung wird eine eigene serverseitige Implementierung verwendet; ein externer Kontaktformular-Dienst wird nicht eingesetzt.",
+        "emailText": "Für den Empfang und die Bearbeitung von Nachrichten nutze ich Outlook.com, einen Dienst von Microsoft. Dabei werden die im Rahmen der Kommunikation übermittelten personenbezogenen Daten auch durch Microsoft verarbeitet. Eine Verarbeitung außerhalb des Europäischen Wirtschaftsraums ist je nach Dienstkonfiguration möglich.",
+        "emailInfo": "Weitere Informationen enthält die <a href=\"https://www.microsoft.com/de-de/privacy/privacystatement\" target=\"_blank\" rel=\"noopener noreferrer\">Datenschutzerklärung von Microsoft</a>.",
+        "storageText": "Diese Website speichert Ihre ausgewählte Sprache im lokalen Speicher Ihres Browsers (Local Storage) unter dem Schlüssel <strong>portfolioLanguage</strong>, damit Ihre Sprachauswahl bei weiteren Seitenaufrufen erhalten bleibt. Die Information dient ausschließlich der Speicherung dieser Einstellung.",
+        "storageOther": "Weitere mögliche Cookies oder vergleichbare Technologien sind abhängig von der tatsächlichen technischen Konfiguration der Website.",
+        "linksText": "Diese Website enthält Links zu externen Plattformen, insbesondere GitHub und LinkedIn. Beim Anklicken eines solchen Links verlassen Sie diese Website. Für die Verarbeitung personenbezogener Daten auf den verlinkten Angeboten sind deren Betreiber verantwortlich.",
+        "rightsText": "Nach Maßgabe der gesetzlichen Voraussetzungen haben Sie Rechte auf Auskunft (Art. 15 DSGVO), Berichtigung (Art. 16 DSGVO), Löschung (Art. 17 DSGVO), Einschränkung der Verarbeitung (Art. 18 DSGVO), Datenübertragbarkeit (Art. 20 DSGVO) und Widerspruch (Art. 21 DSGVO). Eine erteilte Einwilligung können Sie jederzeit mit Wirkung für die Zukunft widerrufen (Art. 7 Abs. 3 DSGVO).",
+        "rightsAuthority": "Sie haben außerdem das Recht, sich bei einer zuständigen Datenschutzaufsichtsbehörde zu beschweren (Art. 77 DSGVO). Für Hessen ist dies der Hessische Beauftragte für Datenschutz und Informationsfreiheit. Weitere Informationen unter <a href=\"https://datenschutz.hessen.de\" target=\"_blank\" rel=\"noopener noreferrer\">datenschutz.hessen.de</a>.",
+        "lastUpdated": "Stand: 6. November 2026"
     }
 }
