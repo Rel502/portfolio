@@ -58,8 +58,7 @@
         top: 54%;
     }
 
-    .hero-socials,
-    .hero-logo {
+    .hero-top {
         display: none;
     }
 
@@ -263,16 +262,9 @@
         row-gap: clamp(20px, 3vh, 40px);
         padding-bottom: 80px;
     }
-
-    .hero-socials {
-        top: clamp(109px, 18vh, 390px);
-    }
 }
 
 @media (min-width: 1921px) and (min-height: 1200px) {
-    .hero-socials {
-        top: clamp(109px, 48vh, 280px);
-    }
     .hero-right {
         grid-template-rows: 2fr 1fr 0fr;
     }
@@ -312,5 +304,33 @@
 
     .hero-intro p {
         font-size: 48px;
+    }
+}
+
+
+/* ============================= */
+/* Hero Large Tablet Portrait    */
+/* ============================= */
+
+@media (min-width: 1025px) and (max-width: 1439px) and (orientation: portrait) {
+    .hero {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .hero-left,
+    .hero-right {
+        flex: 1;
+        min-width: 0;
+    }
+
+    .hero-image-wrapper {
+        align-self: center;
+    }
+
+    .hero-right {
+        align-content: center;
+        padding-bottom: 0;
     }
 }
