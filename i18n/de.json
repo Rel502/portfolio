@@ -87,7 +87,7 @@
             "privacyLink": "Datenschutzerklärung",
             "privacyEnd": "gelesen und stimme der Verarbeitung meiner Daten wie beschrieben zu.",
             "privacyRequired": "Bitte akzeptiere die Datenschutzerklärung.",
-            "privacyText": "Ich habe die <a href=\"./datenschutz.html#privacy-policy\" class=\"privacy-link\">Datenschutzerklärung</a> gelesen und stimme der Verarbeitung meiner Daten wie beschrieben zu.",
+            "privacyText": "Ich habe die <a href=\"./datenschutz.html\" class=\"privacy-link\">Datenschutzerklärung</a> gelesen und stimme der Verarbeitung meiner Daten wie beschrieben zu.",
             "send": "Senden",
             "success": "Deine Nachricht wurde erfolgreich gesendet."
         }

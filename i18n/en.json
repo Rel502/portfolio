@@ -87,7 +87,7 @@
             "privacyLink": "privacy policy",
             "privacyEnd": "and agree to the processing of my data as outlined.",
             "privacyRequired": "Please accept the privacy policy.",
-            "privacyText": "I have read the <a href=\"./datenschutz.html#privacy-policy\" class=\"privacy-link\">privacy policy</a> and agree to the processing of my data as described.",
+            "privacyText": "I've read the <a href=\"./datenschutz.html\" class=\"privacy-link\">privacy policy</a> and agree to the processing of my data as outlined.",
             "send": "Send",
             "success": "Your message has been sent successfully."
         }
