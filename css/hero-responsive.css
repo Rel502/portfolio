@@ -258,79 +258,19 @@
 @media (min-width: 1025px) {
     .hero-right {
         grid-template-rows: auto auto auto;
-        align-content: flex-end;
-        row-gap: clamp(20px, 3vh, 40px);
-        padding-bottom: 80px;
-    }
-}
-
-@media (min-width: 1921px) and (min-height: 1200px) {
-    .hero-right {
-        grid-template-rows: 2fr 1fr 0fr;
-    }
-}
-
-
-/* ============================= */
-/* Hero Large Screens            */
-/* ============================= */
-
-@media (min-width: 1921px) {
-    .hero {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        padding: 0;
-        gap: 16px;
-    }
-
-    .hero-image-wrapper {
-        flex: 1;
-    }
-
-    .hero-intro h1 {
-        font-size: 96px;
-    }
-
-    .hero-intro p {
-        font-size: 44px;
-    }
-}
-
-@media (min-width: 2560px) {
-    .hero-image-wrapper {
-        width: min(660px, 92%);
-    }
-
-    .hero-intro p {
-        font-size: 48px;
-    }
-}
-
-
-/* ============================= */
-/* Hero Large Tablet Portrait    */
-/* ============================= */
-
-@media (min-width: 1025px) and (max-width: 1439px) and (orientation: portrait) {
-    .hero {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-
-    .hero-left,
-    .hero-right {
-        flex: 1;
-        min-width: 0;
-    }
-
-    .hero-image-wrapper {
-        align-self: center;
-    }
-
-    .hero-right {
         align-content: center;
+        row-gap: clamp(20px, 3vh, 40px);
         padding-bottom: 0;
+    }
+}
+
+
+/* ============================= */
+/* Hero Large Desktop            */
+/* ============================= */
+
+@media (min-width: 1440px) {
+    .hero {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 }

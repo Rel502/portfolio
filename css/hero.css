@@ -16,13 +16,14 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
 
-    padding: 0 120px;
+    padding: 0 clamp(48px, 8.333vw, 120px);
     box-sizing: border-box;
+    align-items: center;
 }
 
 .hero-left {
     display: flex;
-    /* justify-content: center; */
+    justify-content: center;
     align-items: center;
 }
 
@@ -30,9 +31,8 @@
     position: relative;
     z-index: 0;
 
-    width: min(500px, 80%);
+    width: min(100%, 480px);
     display: flex;
-    align-self: end;
 }
 
 .hero-image-wrapper::before,
@@ -128,8 +128,8 @@
 .hero-intro {
     grid-row: 2;
     text-align: center;
-    align-self: start;
-    margin-top: 24px;
+    align-self: center;
+    margin-top: 0;
     pointer-events: none;
 }
 
