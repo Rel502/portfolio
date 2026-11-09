@@ -49,7 +49,7 @@
     background-size: contain;
     background-position: center;
 
-    top: 60%;
+    top: 59%;
     left: 50%;
     transform: translate(-50%, -50%);
 
@@ -64,6 +64,7 @@
 .hero-image-wrapper::after {
     background-image: url("../assets/icons/ellipse-hero-hover.svg");
     opacity: 0;
+    transform: translate(-52%, -50%);
 }
 
 .hero-left:hover .hero-image-wrapper::before {
@@ -81,7 +82,29 @@
     width: 100%;
     height: auto;
     display: block;
+
+    -webkit-mask-image:
+        linear-gradient(black 55%, transparent 55%),
+        url("../assets/icons/ellipse-hero-default.svg");
+
+    mask-image:
+        linear-gradient(black 55%, transparent 55%),
+        url("../assets/icons/ellipse-hero-default.svg");
+
+    -webkit-mask-size: 100% 100%, 103% auto;
+    mask-size: 100% 100%, 103% auto;
+
+    -webkit-mask-position: center, center bottom;
+    mask-position: center, center bottom;
+
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+
+    -webkit-mask-composite: source-over;
+    mask-composite: add;
 }
+
+
 
 .mobile-hero-menu {
     display: none;
