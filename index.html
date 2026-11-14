@@ -222,77 +222,17 @@
 
             <nav class="projects-tabs scroll-reveal scroll-delay-short" aria-label="Project selection"
                 data-i18n-aria-label="projects.selection">
-                <button type="button" class="project-tab active" data-project="pokedex"
-                    data-i18n="projects.tabs.pokedex">1. Pokedex</button>
-                <button type="button" class="project-tab" data-project="join" data-i18n="projects.tabs.join">2.
-                    Join</button>
+
+                <button type="button" class="project-tab active" data-project="join" data-i18n="projects.tabs.join">Join</button>
+
                 <button type="button" class="project-tab" data-project="el-pollo-loco"
-                    data-i18n="projects.tabs.elPolloLoco">3. El Pollo Loco</button>
+                    data-i18n="projects.tabs.elPolloLoco">El Pollo Loco</button>
+
+                <button type="button" class="project-tab" data-project="ongoing" data-i18n="projects.tabs.ongoing">Ongoing Project</button>
             </nav>
 
             <div class="projects-content scroll-reveal scroll-delay-medium">
-                <article class="project-panel active" data-project="pokedex">
-                    <div class="project-info">
-                        <div class="project-text-block">
-                            <div class="project-headline-row">
-                                <h3 data-i18n="projects.common.about">About the project</h3>
-                                <span data-i18n="projects.pokedex.duration">Duration: 3 weeks</span>
-                            </div>
-
-                            <p data-i18n="projects.pokedex.description">
-                                A simple web application that uses the PokéAPI to display Pokémon data.
-                                Users can search for Pokémon and view relevant details in a clean interface.
-                            </p>
-                        </div>
-
-                        <div class="project-text-block">
-                            <h3 data-i18n="projects.common.workProcess">How I have organised my work process</h3>
-
-                            <p data-i18n="projects.pokedex.workProcess">
-                                The project was structured with reusable functions, separated logic and
-                                clear file organisation for HTML, CSS and JavaScript.
-                            </p>
-                        </div>
-
-                        <div class="project-text-block">
-                            <h3 data-i18n="projects.common.learned">What I have learnt</h3>
-
-                            <p data-i18n="projects.pokedex.learned">
-                                This project helped me practise planning, documenting and improving code
-                                step by step.
-                            </p>
-                        </div>
-                    </div>
-
-                    <div class="project-preview">
-                        <div class="project-technologies">
-                            <span data-i18n="projects.common.technologies">Technologies</span>
-
-                            <div class="project-tech-icons">
-                                <img src="./assets/icons/skills-HTML.svg" alt="HTML" class="project-tech-icon">
-                                <img src="./assets/icons/skills-CSS.svg" alt="CSS" class="project-tech-icon">
-                                <img src="./assets/icons/skills-JavaScript.svg" alt="JavaScript"
-                                    class="project-tech-icon">
-                                <img src="./assets/icons/skills-Rest-Api.svg" alt="REST API" class="project-tech-icon">
-                            </div>
-                        </div>
-
-                        <div class="project-image-wrapper">
-                            <img src="./assets/img/projects/pokedex.png" alt="Screenshot of the Pokedex project"
-                                class="project-image">
-                        </div>
-
-                        <div class="project-actions">
-                            <a href="https://pokedex.michaelzeitler.de/" class="btn project-btn project-btn--primary"
-                                target="_blank" rel="noopener noreferrer" data-i18n="projects.common.liveTest">Live
-                                Test</a>
-                            <a href="https://github.com/Rel502/pokedex" class="btn project-btn project-btn--outline"
-                                target="_blank" rel="noopener noreferrer" data-i18n="projects.common.github">GitHub</a>
-                        </div>
-                    </div>
-                </article>
-
-                <article class="project-panel" data-project="join">
+                <article class="project-panel active" data-project="join">
                     <div class="project-info">
                         <div class="project-text-block">
                             <div class="project-headline-row">
@@ -410,6 +350,41 @@
                             <a href="https://github.com/Rel502/el_pollo_loco"
                                 class="btn project-btn project-btn--outline" target="_blank" rel="noopener noreferrer"
                                 data-i18n="projects.common.github">GitHub</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="project-panel" data-project="ongoing">
+                    <div class="project-info">
+                        <div class="project-text-block">
+                            <h3 data-i18n="projects.common.about">
+                                About the project
+                            </h3>
+
+                            <p data-i18n="projects.ongoing.description">
+                                I'm currently working on a new project.
+                                More details will follow soon.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="project-preview">
+                        <div class="project-technologies">
+                            <span data-i18n="projects.common.technologies">Technologies</span>
+
+                            <div class="project-tech-icons">
+                                <img src="./assets/icons/skills-HTML.svg" alt="HTML" class="project-tech-icon">
+                                <img src="./assets/icons/skills-CSS.svg" alt="CSS" class="project-tech-icon">
+                                <img src="./assets/icons/skills-JavaScript.svg" alt="JavaScript"
+                                    class="project-tech-icon">
+                                <img src="./assets/icons/skills-TypeScript.svg" alt="Typescript" class="project-tech-icon">
+                                <img src="./assets/icons/skills-Angular.svg" alt="Angular" class="project-tech-icon">
+                            </div>
+                        </div>
+
+                        <div class="project-image-wrapper">
+                            <img src="./assets/img/projects/ongoing.png"
+                                alt="Illustration of the ITIL 4 ticket management application" class="project-image">
                         </div>
                     </div>
                 </article>

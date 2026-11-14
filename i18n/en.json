@@ -36,9 +36,9 @@
         "title": "My Projects",
         "selection": "Project selection",
         "tabs": {
-            "pokedex": "1. Pokedex",
-            "join": "2. Join",
-            "elPolloLoco": "3. El Pollo Loco"
+            "join": "Join",
+            "elPolloLoco": "El Pollo Loco",
+            "ongoing": "Ongoing Project"
         },
         "common": {
             "about": "About the project",
@@ -47,12 +47,6 @@
             "technologies": "Technologies",
             "liveTest": "Live Test",
             "github": "GitHub"
-        },
-        "pokedex": {
-            "duration": "Duration: 3 weeks",
-            "description": "A simple web application that uses the PokéAPI to display Pokémon data. Users can search for Pokémon and view relevant details in a clean interface.",
-            "workProcess": "The project was structured with reusable functions, separated logic and clear file organisation for HTML, CSS and JavaScript.",
-            "learned": "This project helped me practise planning, documenting and improving code step by step."
         },
         "join": {
             "duration": "Duration: 5 weeks",
@@ -66,6 +60,10 @@
             "description": "El Pollo Loco is a 2D jump-and-run game built with object-oriented JavaScript. The player collects items, avoids enemies and fights the final boss.",
             "workProcess": "The game logic was structured into separate classes for the character, enemies, objects, the world and collision handling.",
             "learned": "This project helped me improve my understanding of object-oriented programming, animations, game loops and interactive browser-based applications."
+        },
+        "ongoing": {
+            "description": "An ITIL 4-based ticket management application for creating, managing and tracking Service Requests, Incidents, Changes and Problems. The project focuses on structured workflows and efficient IT service management.",
+            "comingSoon": "Coming soon"
         }
     },
     "contact": {

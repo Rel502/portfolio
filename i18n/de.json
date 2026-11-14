@@ -36,9 +36,9 @@
         "title": "Meine Projekte",
         "selection": "Projektauswahl",
         "tabs": {
-            "pokedex": "1. Pokedex",
-            "join": "2. Join",
-            "elPolloLoco": "3. El Pollo Loco"
+            "join": "Join",
+            "elPolloLoco": "El Pollo Loco",
+            "ongoing": "Ongoing Project"
         },
         "common": {
             "about": "Über das Projekt",
@@ -47,12 +47,6 @@
             "technologies": "Technologien",
             "liveTest": "Live Test",
             "github": "GitHub"
-        },
-        "pokedex": {
-            "duration": "Dauer: 3 Wochen",
-            "description": "Eine einfache Webanwendung, die die PokéAPI nutzt, um Pokémon-Daten anzuzeigen. Nutzer können nach Pokémon suchen und relevante Details in einer übersichtlichen Oberfläche ansehen.",
-            "workProcess": "Das Projekt wurde mit wiederverwendbaren Funktionen, getrennter Logik und einer klaren Dateistruktur für HTML, CSS und JavaScript aufgebaut.",
-            "learned": "Dieses Projekt hat mir geholfen, Planung, Dokumentation und schrittweise Verbesserung von Code zu üben."
         },
         "join": {
             "duration": "Dauer: 5 Wochen",
@@ -66,6 +60,10 @@
             "description": "El Pollo Loco ist ein 2D-Jump-and-Run-Spiel, das mit objektorientiertem JavaScript umgesetzt wurde. Der Spieler sammelt Gegenstände, weicht Gegnern aus und kämpft gegen den Endboss.",
             "workProcess": "Die Spiellogik wurde in separate Klassen für den Charakter, Gegner, Objekte, die Welt und die Kollisionsprüfung aufgeteilt.",
             "learned": "Dieses Projekt hat mir geholfen, mein Verständnis für objektorientierte Programmierung, Animationen, Game Loops und interaktive browserbasierte Anwendungen zu verbessern."
+        },
+        "ongoing": {
+            "description": "Eine auf ITIL 4 basierende Ticketmanagement-Anwendung zur Erstellung, Bearbeitung und Nachverfolgung von Service Requests, Incidents, Changes und Problems. Im Fokus stehen strukturierte Workflows und ein effizientes IT-Service-Management.",
+            "comingSoon": "Demnächst"
         }
     },
     "contact": {

@@ -48,7 +48,7 @@
     align-items: start;
     gap: 64px;
 
-    min-height: 560px;
+    min-height: 480px;
     padding: 48px 80px;
 }
 
@@ -85,7 +85,7 @@
 .project-headline-row {
     display: flex;
     justify-content: space-between;
-    align-items: flex-start;
+    align-items: center;
     gap: 24px;
 }
 
@@ -93,7 +93,7 @@
     color: var(--color-secondary);
     font-family: var(--font-body);
     font-weight: var(--fw-regular);
-    font-size: 14px;
+    font-size: 16px;
     line-height: 120%;
     white-space: nowrap;
 }
