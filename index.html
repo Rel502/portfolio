@@ -206,8 +206,7 @@
                     </div>
 
                     <p data-i18n="skills.learningDescription">
-                        I am motivated to continuously improve my skills,
-                        implement innovative solutions and stay up to date
+                        I am motivated to continuously improve my skills and stay up to date
                         with new technologies.
                     </p>
                 </div>
@@ -223,12 +222,18 @@
             <nav class="projects-tabs scroll-reveal scroll-delay-short" aria-label="Project selection"
                 data-i18n-aria-label="projects.selection">
 
-                <button type="button" class="project-tab active" data-project="join" data-i18n="projects.tabs.join">Join</button>
+                <button type="button" class="project-tab active" data-project="join"
+                    data-i18n="projects.tabs.join">Join</button>
 
                 <button type="button" class="project-tab" data-project="el-pollo-loco"
                     data-i18n="projects.tabs.elPolloLoco">El Pollo Loco</button>
 
-                <button type="button" class="project-tab" data-project="ongoing" data-i18n="projects.tabs.ongoing">Ongoing Project</button>
+                <button type="button" class="project-tab" data-project="ongoing">
+                    <span class="project-tab-desktop" data-i18n="projects.tabs.ongoing">
+                        Ongoing Project
+                    </span>
+                    <span class="project-tab-mobile">Ongoing</span>
+                </button>
             </nav>
 
             <div class="projects-content scroll-reveal scroll-delay-medium">
@@ -276,7 +281,15 @@
                                     class="project-tech-icon">
                                 <img src="./assets/icons/skills-Firebase.svg" alt="Firebase" class="project-tech-icon">
                             </div>
+                            <p class="project-tech-text">
+                                <span data-i18n="projects.common.technologies">Technologies</span>:
+                                HTML, CSS, JavaScript, Firebase
+                            </p>
                         </div>
+
+                        <span class="project-duration-mobile" data-i18n="projects.join.duration">
+                            Duration: 5 weeks
+                        </span>
 
                         <div class="project-image-wrapper">
                             <img src="./assets/img/projects/join.png" alt="Screenshot of the Join project"
@@ -336,7 +349,15 @@
                                 <img src="./assets/icons/skills-JavaScript.svg" alt="JavaScript"
                                     class="project-tech-icon">
                             </div>
+                            <p class="project-tech-text">
+                                <span data-i18n="projects.common.technologies">Technologies</span>:
+                                HTML, CSS, JavaScript
+                            </p>
                         </div>
+
+                        <span class="project-duration-mobile" data-i18n="projects.elPolloLoco.duration">
+                            Duration: 4 weeks
+                        </span>
 
                         <div class="project-image-wrapper">
                             <img src="./assets/img/projects/el-pollo-loco.png"
@@ -377,9 +398,14 @@
                                 <img src="./assets/icons/skills-CSS.svg" alt="CSS" class="project-tech-icon">
                                 <img src="./assets/icons/skills-JavaScript.svg" alt="JavaScript"
                                     class="project-tech-icon">
-                                <img src="./assets/icons/skills-TypeScript.svg" alt="Typescript" class="project-tech-icon">
+                                <img src="./assets/icons/skills-TypeScript.svg" alt="Typescript"
+                                    class="project-tech-icon">
                                 <img src="./assets/icons/skills-Angular.svg" alt="Angular" class="project-tech-icon">
                             </div>
+                            <p class="project-tech-text">
+                                <span data-i18n="projects.common.technologies">Technologies</span>:
+                                HTML, CSS, JavaScript, TypeScript, Angular
+                            </p>
                         </div>
 
                         <div class="project-image-wrapper">

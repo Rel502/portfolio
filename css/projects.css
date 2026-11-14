@@ -209,3 +209,19 @@
     top: 2px;
     left: 0;
 }
+
+.project-tab-mobile {
+    display: none;
+}
+
+.project-tab-desktop {
+    display: inline;
+}
+
+.project-duration-mobile {
+    display: none;
+}
+
+.project-tech-text {
+    display: none;
+}
