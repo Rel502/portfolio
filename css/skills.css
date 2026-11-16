@@ -17,8 +17,17 @@
 
 .skill-item {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+    gap: 10px;
+}
+
+.skill-item>span {
+    font-family: var(--font-body);
+    font-weight: var(--fw-regular);
+    color: var(--color-primary);
+    font-size: 18px;
 }
 
 .skill-icon {
@@ -112,8 +121,17 @@
 
 .learning-item {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+    gap: 10px;
+}
+
+.learning-item>span {
+    font-family: var(--font-body);
+    font-weight: var(--fw-regular);
+    color: var(--color-primary);
+    font-size: 14px;
 }
 
 .learning-icon {
@@ -175,11 +193,6 @@
         display: none;
     }
 
-    .learning-icons {
-        position: relative;
-        padding: 28px 32px;
-    }
-
     .learning-icons::before {
         content: "";
         position: absolute;
@@ -222,13 +235,13 @@
     .learning-icons {
         order: 3;
         flex: 0 0 auto;
-
-        width: 136px;
-        height: 104px;
-        padding: 0;
+        width: 160px;
+        height: 140px;
+        padding: 28px 32px;
         box-sizing: border-box;
-
-        gap: 16px;
+        gap: 8px;
+        position: relative;
+        
     }
 
     .learning-icon {
@@ -283,7 +296,9 @@
     }
 
     .learning-icons {
-        flex: 0 0 150px;
+        flex: 0 0 200px;
+        height: 200px;
+        gap: 16px;
     }
 
     .skills-learning h3 {
@@ -291,7 +306,7 @@
     }
 
     .skills-learning p {
-        flex: 0 1 440px;
+        flex: 0 1 268px;
         text-align: center;
         font-size: 20px;
         line-height: 130%;
