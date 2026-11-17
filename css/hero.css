@@ -57,8 +57,10 @@
     transition: opacity 500ms ease-in-out;
 }
 
-.hero-left:hover .hero-image-hover {
-    opacity: 1;
+@media (hover: hover) and (pointer: fine) {
+    .hero-left:hover .hero-image-hover {
+        opacity: 1;
+    }
 }
 
 .mobile-hero-menu {
@@ -132,20 +134,26 @@
 }
 
 @media (max-width: 1024px) {
-    body.mobile-menu-open .hero-image-wrapper::before {
+    .hero-image-wrapper::before {
         content: "";
         position: absolute;
         z-index: 0;
 
         display: block;
-        width: 115%;
-        height: 115%;
+        width: 120%;
+        height: 120%;
 
         top: 54%;
         left: 50%;
-        transform: translate(-50%, -50%);
+        opacity: 0;
+        transform: translate(-50%, -50%) scale(0.9);
+        transition: opacity 300ms ease-in-out, transform 300ms ease-in-out;
 
-        background: url("../assets/icons/ellipse-hero-default.svg")
-            center / contain no-repeat;
+        background: url("../assets/icons/ellipse-hero-default.svg") center / contain no-repeat;
+    }
+
+    body.mobile-menu-open .hero-image-wrapper::before {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1);
     }
 }

@@ -22,7 +22,10 @@ function setupMobileMenu() {
     preloadBurgerIcons();
     bindBurgerButton(mobileMenu);
     bindMobileMenuLinks(mobileMenu);
+    bindMobileMenuOutsideClick(mobileMenu);
+    bindMobileMenuScroll(mobileMenu);
 }
+
 
 /** Preloads all burger menu icons. */
 function preloadBurgerIcons() {
@@ -53,6 +56,44 @@ function bindMobileMenuLinks(mobileMenu) {
         link.addEventListener('click', () => closeMobileMenu(mobileMenu));
     });
 }
+
+
+/**
+ * Closes the mobile menu when clicking outside it.
+ * @param {Object} mobileMenu - The mobile menu elements.
+ */
+function bindMobileMenuOutsideClick(mobileMenu) {
+    document.addEventListener('click', (event) => {
+        if (!mobileMenu.mobileHeroMenu.classList.contains('is-open')) {
+            return;
+        }
+
+        if (mobileMenu.burgerButton.contains(event.target)) {
+            return;
+        }
+
+        if (mobileMenu.mobileHeroMenu.contains(event.target)) {
+            return;
+        }
+
+        closeMobileMenu(mobileMenu);
+    });
+}
+
+/**
+ * Closes the mobile menu when the page is scrolled.
+ * @param {Object} mobileMenu - The mobile menu elements.
+ */
+function bindMobileMenuScroll(mobileMenu) {
+    window.addEventListener('scroll', () => {
+        if (!mobileMenu.mobileHeroMenu.classList.contains('is-open')) {
+            return;
+        }
+
+        closeMobileMenu(mobileMenu);
+    });
+}
+
 
 /**
  * Closes the mobile menu and resets the burger icon.
