@@ -52,6 +52,12 @@
     padding: 48px 80px;
 }
 
+@media (min-width: 1440px) {
+    .project-panel {
+        max-height: 550px;
+    }
+}
+
 .project-panel.active {
     display: grid;
 }

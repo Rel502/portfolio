@@ -67,6 +67,7 @@ function setActiveLanguageButton(language) {
  * @param {string} language - The language code to load.
  * @returns {Promise<void>}
  */
+
 async function loadLanguageFile(language) {
     const response = await fetch(`./i18n/${language}.json`);
     const translations = await response.json();
@@ -75,6 +76,25 @@ async function loadLanguageFile(language) {
     document.documentElement.lang = language;
     translatePage(translations);
 }
+
+// async function loadLanguageFile(language) {
+//     const main = document.querySelector('main');
+
+//     if (main) {
+//         main.style.minHeight = `${Math.ceil(main.getBoundingClientRect().height)}px`;
+//     }
+
+//     const response = await fetch(`./i18n/${language}.json`);
+//     const translations = await response.json();
+
+//     currentTranslations = translations;
+//     document.documentElement.lang = language;
+//     translatePage(translations);
+
+//     if (main) {
+//         main.style.minHeight = `${Math.ceil(main.getBoundingClientRect().height)}px`;
+//     }
+// }
 
 /**
  * Returns the current translation or a fallback text.
