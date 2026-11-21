@@ -62,7 +62,7 @@
             "learned": "Dieses Projekt hat mir geholfen, mein Verständnis für objektorientierte Programmierung, Animationen, Game Loops und interaktive browserbasierte Anwendungen zu verbessern."
         },
         "ongoing": {
-            "description": "Eine auf ITIL 4 basierende Ticketmanagement-Anwendung zur Erstellung, Bearbeitung und Nachverfolgung von Service Requests, Incidents, Changes und Problems. Im Fokus stehen strukturierte Workflows und ein effizientes IT-Service-Management.",
+            "description": "Entwicklung eines einfachen künstlichen neuronalen Netzes zur Erkennung handschriftlicher Zahlen. Ziel ist eine Erkennungsgenauigkeit von bis zu 98 % und die anschließende Bereitstellung auf einem Raspberry Pi.",
             "comingSoon": "Demnächst"
         }
     },
